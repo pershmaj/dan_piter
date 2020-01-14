@@ -6,9 +6,17 @@ import CompositionApi from "@vue/composition-api";
 import bootstrap from "bootstrap";
 import VueBootstrap from "bootstrap-vue";
 import "bootstrap/dist/css/bootstrap.css";
+const math = require("mathjax");
 
 Vue.use(VueBootstrap);
 Vue.use(CompositionApi);
+
+declare global {
+    interface Window {
+        MathJax: any;
+    }
+}
+window.MathJax = math;
 
 Vue.config.productionTip = false;
 

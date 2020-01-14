@@ -4,8 +4,9 @@ $black: #263238;
     width: 900px;
     height: 660px;
     margin: auto;
+    color: $black;
 
-    .header {
+    .top {
         height: 56px;
         padding: 16px 0;
         background: $black;
@@ -30,40 +31,159 @@ $black: #263238;
             display: flex;
 
             &-item {
-                min-width: 92px;
+                width: 100px;
                 background-color: $black;
                 border: 1px solid #ffffff;
                 color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
                 &_picked {
-                    width: 118px;
+                    width: 101px;
                     background-color: #ffffff;
                     color: $black;
                     display: flex;
-
-                    .first {
-                        width: 50%;
-                        height: 100%;
-                        // &-svg {
-                        //     width: 19px;
-                        //     height: 14px;
-                        // }
-                    }
                 }
-
-                &-1 {
-                    width: 106px;
-                }
-                &-2 {
-                    width: 94px;
-                }
-                // &-3 {
-                //     width:
-                // }
             }
         }
 
         &__body {
+            height: 168px;
+            padding: 16px;
+            display: flex;
+            border-bottom: 1px solid #d4d6d7;
+
+            .vertical-line {
+                width: 1px;
+                height: 136px;
+                background: #d4d6d7;
+                margin: 0px 8px;
+            }
+
+            .block {
+                background-color: #f8f8f8;
+                border-radius: 3px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:first-child {
+                    margin-right: 8px;
+                }
+
+                &-small {
+                    width: 40px;
+                    height: 40px;
+                    // background-color: #f8f8f8;
+                    // border-radius: 3px;
+                }
+
+                &-wide {
+                    width: 64px;
+                    height: 40px;
+                }
+
+                &-big {
+                    width: 64px;
+                    height: 64px;
+                }
+            }
+
+            .container {
+                &-small {
+                    padding: 16px 0px;
+                    &__line {
+                        display: flex;
+                        margin-bottom: 24px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                &-big {
+                    &.space {
+                        margin-left: 16px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    &__line {
+                        display: flex;
+                        margin-bottom: 8px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            .select {
+                height: 40px;
+                width: 172px;
+                margin-bottom: 8px;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.44px;
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .editor {
+        &-header {
+            margin: 8px 0 24px 16px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            font-family: Raleway;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 28px;
+            letter-spacing: 0.5px;
+            color: #979797;
+        }
+
+        &-body {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+    }
+
+    .code {
+        background: #f4f4f4;
+        padding: 8px 16px 32px 16px;
+        height: 264px;
+        .header {
+            margin-bottom: 24px;
+
+            font-family: Raleway;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 28px;
+            /* identical to box height, or 140% */
+
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.5px;
+
+            /* Icons Color */
+
+            color: #979797;
         }
     }
 }

@@ -1,25 +1,197 @@
 <div id="app">
-    <div class="header">
-        <div class="header__name">Прототип 1</div>
+    <div class="top">
+        <div class="top__name">Прототип 1</div>
     </div>
     <div class="tools">
         <div class="tools__tabs">
-            <div class="tools__tabs-item_picked">
-                <div class="first">
-                    <svg src="/svg/1.svg"></svg>
-                    <img src="/svg/1.svg" height="14" width="19" />
-                </div>
-                <div class="second"></div>
+            <!-- <div
+                v-for="(item, index) in navItems"
+                :key="index"
+                @click="changeTab(index)"
+                :class="currentTab === index? 'tools__tabs-item_picked': ''"
+                class="tools__tabs-item"
+            >
+                <img :src="item.image1" />
+                <div :style="item.image2"></div>
+                <img :src="item.style" />
+            </div> -->
+            <div @click="changeTab(1)" :class="currentTab === 1? 'tools__tabs-item_picked': ''" class="tools__tabs-item">
+                <img src="@/assets/svg/1.svg" />
+                <div style="margin-left:25px;"></div>
+                <img src="@/assets/svg/2.svg" />
             </div>
-            <div class="tools__tabs-item-1"></div>
-            <div class="tools__tabs-item-2"></div>
-            <div class="tools__tabs-item"></div>
-            <div class="tools__tabs-item"></div>
-            <div class="tools__tabs-item"></div>
-            <div class="tools__tabs-item"></div>
-            <div class="tools__tabs-item"></div>
-            <div class="tools__tabs-item"></div>
+            <div @click="changeTab(2)" :class="currentTab === 2? 'tools__tabs-item_picked': ''" class="tools__tabs-item">
+                <img src="@/assets/svg/3.svg" />
+                <div style="margin-left:8px;"></div>
+                <img src="@/assets/svg/4.svg" />
+            </div>
+            <div @click="changeTab(3)" :class="currentTab === 3? 'tools__tabs-item_picked': ''" class="tools__tabs-item">
+                <img src="@/assets/svg/5.svg" />
+                <div style="margin-left:8px;"></div>
+                <img src="@/assets/svg/5.svg" />
+            </div>
+            <div @click="changeTab(4)" :class="currentTab === 4? 'tools__tabs-item_picked': ''" class="tools__tabs-item"></div>
+            <div @click="changeTab(5)" class="tools__tabs-item"></div>
+            <div @click="changeTab(6)" class="tools__tabs-item"></div>
+            <div @click="changeTab(7)" class="tools__tabs-item"></div>
+            <div @click="changeTab(8)" class="tools__tabs-item"></div>
+            <div @click="changeTab(9)" class="tools__tabs-item"></div>
         </div>
-        <div class="tools__body"></div>
+        <div v-show="currentTab===1" class="tools__body">
+            <div class="container-small">
+                <div class="container-small__line">
+                    <div class="block block-small">
+                        <img src="@/assets/svg/a1.svg" />
+                    </div>
+                    <div class="block block-small">
+                        <img src="@/assets/svg/a2.svg" />
+                    </div>
+                </div>
+                <div class="container-small__line">
+                    <div class="block block-small">
+                        <img src="@/assets/svg/a3.svg" />
+                    </div>
+                    <div class="block block-small">
+                        <img src="@/assets/svg/a4.svg" />
+                    </div>
+                </div>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="container-small">
+                <div class="container-small__line">
+                    <div class="block block-small">
+                        <img src="@/assets/svg/a2.svg" />
+                    </div>
+                    <div class="block block-small">
+                        <img src="@/assets/svg/a2.svg" />
+                    </div>
+                </div>
+                <div class="container-small__line">
+                    <div class="block block-small">
+                        <img src="@/assets/svg/a3.svg" />
+                    </div>
+                    <div class="block block-small">
+                        <img src="@/assets/svg/a4.svg" />
+                    </div>
+                </div>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="container-big">
+                <div class="container-big__line">
+                    <div class="block block-small">
+                        <img src="@/assets/svg/a2.svg" />
+                    </div>
+                    <div class="block block-small">
+                        <img src="@/assets/svg/a2.svg" />
+                    </div>
+                </div>
+                <div class="container-big__line">
+                    <div class="block block-small">
+                        <img src="@/assets/svg/a3.svg" />
+                    </div>
+                    <div class="block block-small">
+                        <img src="@/assets/svg/a4.svg" />
+                    </div>
+                </div>
+                <div class="container-big__line">
+                    <div class="block block-small">
+                        <img src="@/assets/svg/a3.svg" />
+                    </div>
+                    <div class="block block-small">
+                        <img src="@/assets/svg/a4.svg" />
+                    </div>
+                </div>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="container-big">
+                <div class="container-big__line">
+                    <div class="block block-small">
+                        <img src="@/assets/svg/a2.svg" />
+                    </div>
+                    <div class="block block-wide">
+                        <img src="@/assets/svg/b1.svg" />
+                    </div>
+                </div>
+                <div class="container-big__line">
+                    <div class="block block-small">
+                        <img src="@/assets/svg/a3.svg" />
+                    </div>
+                    <div class="block block-wide">
+                        <img src="@/assets/svg/b1.svg" />
+                    </div>
+                </div>
+                <div class="container-big__line">
+                    <div class="block block-small">
+                        <img src="@/assets/svg/a3.svg" />
+                    </div>
+                    <div class="block block-wide">
+                        <img src="@/assets/svg/b1.svg" />
+                    </div>
+                </div>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="container-big">
+                <div class="container-big__line">
+                    <div class="block block-big">
+                        <img src="@/assets/svg/c1.svg" />
+                    </div>
+                    <div class="block block-big">
+                        <img src="@/assets/svg/c2.svg" />
+                    </div>
+                </div>
+                <div class="container-big__line">
+                    <div class="block block-big">
+                        <img src="@/assets/svg/c3.svg" />
+                    </div>
+                    <div class="block block-big">
+                        <img src="@/assets/svg/c4.svg" />
+                    </div>
+                </div>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="container-big">
+                <div class="container-big__line">
+                    <div class="block block-small">
+                        <img src="@/assets/svg/d1.svg" />
+                    </div>
+                    <div class="block block-small">
+                        <img src="@/assets/svg/d2.svg" />
+                    </div>
+                </div>
+                <div class="container-big__line">
+                    <div class="block block-small">
+                        <img src="@/assets/svg/d3.svg" />
+                    </div>
+                    <div class="block block-small">
+                        <img src="@/assets/svg/d4.svg" />
+                    </div>
+                </div>
+            </div>
+            <div class="container-big space">
+                <b-form-select class="select" v-model="fontFamilySelect">
+                    <option value="">Шрифт</option>
+                </b-form-select>
+                <b-form-select class="select" v-model="fontSizeSelect">
+                    <option value="">Размер</option>
+                </b-form-select>
+            </div>
+        </div>
+        <div v-show="currentTab===2" class="tools__body"></div>
+        <div v-show="currentTab===3" class="tools__body"></div>
+        <div v-show="currentTab===4" class="tools__body"></div>
+        <div v-show="currentTab===5" class="tools__body"></div>
+        <div v-show="currentTab===6" class="tools__body"></div>
+        <div v-show="currentTab===7" class="tools__body"></div>
+        <div v-show="currentTab===8" class="tools__body"></div>
+        <div v-show="currentTab===9" class="tools__body"></div>
+    </div>
+    <div class="editor">
+        <div class="editor-header">Формула</div>
+        <div id="editor" class="editor-body"></div>
+    </div>
+    <div class="code">
+        <div class="header">Представление формулы нa LaTeX</div>
+
+        <b-form-input v-model="formula"></b-form-input>
     </div>
 </div>
