@@ -16,28 +16,92 @@
                 <img :src="item.style" />
             </div> -->
             <div @click="changeTab(1)" :class="currentTab === 1? 'tools__tabs-item_picked': ''" class="tools__tabs-item">
-                <img src="@/assets/svg/1.svg" />
-                <div style="margin-left:25px;"></div>
-                <img src="@/assets/svg/2.svg" />
+                <img src="@/assets/svg/tab1.svg" />
             </div>
             <div @click="changeTab(2)" :class="currentTab === 2? 'tools__tabs-item_picked': ''" class="tools__tabs-item">
-                <img src="@/assets/svg/3.svg" />
-                <div style="margin-left:8px;"></div>
-                <img src="@/assets/svg/4.svg" />
+                <img src="@/assets/svg/tab2.svg" />
             </div>
             <div @click="changeTab(3)" :class="currentTab === 3? 'tools__tabs-item_picked': ''" class="tools__tabs-item">
-                <img src="@/assets/svg/5.svg" />
-                <div style="margin-left:8px;"></div>
-                <img src="@/assets/svg/5.svg" />
+                <img src="@/assets/svg/tab3.svg" />
             </div>
-            <div @click="changeTab(4)" :class="currentTab === 4? 'tools__tabs-item_picked': ''" class="tools__tabs-item"></div>
-            <div @click="changeTab(5)" class="tools__tabs-item"></div>
-            <div @click="changeTab(6)" class="tools__tabs-item"></div>
-            <div @click="changeTab(7)" class="tools__tabs-item"></div>
-            <div @click="changeTab(8)" class="tools__tabs-item"></div>
-            <div @click="changeTab(9)" class="tools__tabs-item"></div>
+            <div @click="changeTab(4)" :class="currentTab === 4? 'tools__tabs-item_picked': ''" class="tools__tabs-item">
+                <img src="@/assets/svg/tab4.svg" />
+            </div>
+            <div @click="changeTab(5)" class="tools__tabs-item">
+                <img src="@/assets/svg/tab5.svg" />
+            </div>
+            <div @click="changeTab(6)" class="tools__tabs-item">
+                <img src="@/assets/svg/tab6.svg" />
+            </div>
+            <div @click="changeTab(7)" class="tools__tabs-item">
+                <img src="@/assets/svg/tab7.svg" />
+            </div>
+            <div @click="changeTab(8)" class="tools__tabs-item">
+                <img src="@/assets/svg/tab8.svg" />
+            </div>
+            <div @click="changeTab(9)" class="tools__tabs-item">
+                <img src="@/assets/svg/tab9.svg" />
+            </div>
         </div>
         <div v-show="currentTab===1" class="tools__body">
+            <div class="container-big">
+                <div class="container-big__line">
+                    <div class="block block-big">
+                        <img src="@/assets/svg/1-1-1.svg" />
+                    </div>
+                    <div class="block block-big">
+                        <img src="@/assets/svg/1-1-3.svg" />
+                    </div>
+                </div>
+                <div class="container-big__line">
+                    <div class="block block-big">
+                        <img src="@/assets/svg/1-1-2.svg" />
+                    </div>
+                    <div class="block block-big">
+                        <img src="@/assets/svg/1-1-4.svg" />
+                    </div>
+                </div>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="container-big">
+                <div class="container-big__line">
+                    <div class="block block-big">
+                        <img src="@/assets/svg/1-2-1.svg" />
+                    </div>
+                </div>
+                <div class="container-big__line">
+                    <div class="block block-big">
+                        <img src="@/assets/svg/1-2-2.svg" />
+                    </div>
+                </div>
+            </div>
+            <div class="vertical-line"></div>
+                <div class="container-big__line">
+                    <div class="block block-small">
+                        <img src="@/assets/svg/a2.svg" />
+                    </div>
+                    <div class="block block-small">
+                        <img src="@/assets/svg/a2.svg" />
+                    </div>
+                </div>
+                <div class="container-big__line">
+                    <div class="block block-small">
+                        <img src="@/assets/svg/a3.svg" />
+                    </div>
+                    <div class="block block-small">
+                        <img src="@/assets/svg/a4.svg" />
+                    </div>
+                </div>
+                <div class="container-big__line">
+                    <div class="block block-small">
+                        <img src="@/assets/svg/a3.svg" />
+                    </div>
+                    <div class="block block-small">
+                        <img src="@/assets/svg/a4.svg" />
+                    </div>
+                </div>
+            </div>
+            <div class="vertical-line"></div>
             <div class="container-small">
                 <div class="container-small__line">
                     <div class="block block-small">
@@ -76,33 +140,7 @@
                 </div>
             </div>
             <div class="vertical-line"></div>
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div class="block block-small">
-                        <img src="@/assets/svg/a2.svg" />
-                    </div>
-                    <div class="block block-small">
-                        <img src="@/assets/svg/a2.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div class="block block-small">
-                        <img src="@/assets/svg/a3.svg" />
-                    </div>
-                    <div class="block block-small">
-                        <img src="@/assets/svg/a4.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div class="block block-small">
-                        <img src="@/assets/svg/a3.svg" />
-                    </div>
-                    <div class="block block-small">
-                        <img src="@/assets/svg/a4.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
+
             <div class="container-big">
                 <div class="container-big__line">
                     <div class="block block-small">
@@ -130,25 +168,7 @@
                 </div>
             </div>
             <div class="vertical-line"></div>
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div class="block block-big">
-                        <img src="@/assets/svg/c1.svg" />
-                    </div>
-                    <div class="block block-big">
-                        <img src="@/assets/svg/c2.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div class="block block-big">
-                        <img src="@/assets/svg/c3.svg" />
-                    </div>
-                    <div class="block block-big">
-                        <img src="@/assets/svg/c4.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
+
             <div class="container-big">
                 <div class="container-big__line">
                     <div class="block block-small">
