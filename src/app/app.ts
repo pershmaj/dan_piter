@@ -7,9 +7,15 @@ export default createComponent({
         const s = reactive({
             fontFamilySelect: "",
             fontSizeSelect: "",
-            formula: "\\frac{a}{1-aa^2}",
+            formula: "\\theta = n \\times 137.508^circ,",
             editor: ref(null),
-            currentTab: ref(1)
+            currentTab: ref(1),
+            config: {
+                lang: "latex",
+                autoCompletion: true,
+                theme: "dreamweaver",
+                tabSize: 4
+            }
         });
 
         var head = document.getElementsByTagName("head")[0],
@@ -57,16 +63,16 @@ export default createComponent({
     }
 });
 
-function navigation() {
-    return [
-        { image1: "@/assets/svg/1.svg?data", image2: "margin-left:25px;", style: "@/assets/svg/2.svg" },
-        { image1: "@/assets/svg/3.svg?data", image2: "margin-left:8px;", style: "@/assets/svg/4.svg" },
-        { image1: "@/assets/svg/5.svg", image2: "margin-left:8px;", style: "@/assets/svg/5.svg" },
-        { image1: "", image2: "", style: "" },
-        { image1: "", image2: "", style: "" },
-        { image1: "", image2: "", style: "" },
-        { image1: "", image2: "", style: "" },
-        { image1: "", image2: "", style: "" },
-        { image1: "", image2: "", style: "" }
-    ];
-}
+// function navigation() {
+//     return [
+//         { image1: "@/assets/svg/1.svg?data", image2: "margin-left:25px;", style: "@/assets/svg/2.svg" },
+//         { image1: "@/assets/svg/3.svg?data", image2: "margin-left:8px;", style: "@/assets/svg/4.svg" },
+//         { image1: "@/assets/svg/5.svg", image2: "margin-left:8px;", style: "@/assets/svg/5.svg" },
+//         { image1: "", image2: "", style: "" },
+//         { image1: "", image2: "", style: "" },
+//         { image1: "", image2: "", style: "" },
+//         { image1: "", image2: "", style: "" },
+//         { image1: "", image2: "", style: "" },
+//         { image1: "", image2: "", style: "" }
+//     ];
+// }

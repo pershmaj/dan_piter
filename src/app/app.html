@@ -191,7 +191,6 @@
     </div>
     <div class="code">
         <div class="header">Представление формулы нa LaTeX</div>
-
-        <b-form-input v-model="formula"></b-form-input>
+        <AceEditor class="body" v-model="formula" :config="config" />
     </div>
 </div>

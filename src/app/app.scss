@@ -160,6 +160,7 @@ $black: #263238;
             display: flex;
             justify-content: center;
             margin-bottom: 60px;
+            min-height: 100px;
         }
     }
 
@@ -184,6 +185,10 @@ $black: #263238;
             /* Icons Color */
 
             color: #979797;
+        }
+
+        .ace_editor {
+            height: 200px;
         }
     }
 }
