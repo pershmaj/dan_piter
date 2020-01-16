@@ -18,6 +18,8 @@ export default createComponent({
             }
         });
 
+        const ace = ref(null);
+
         var head = document.getElementsByTagName("head")[0],
             script;
         script = document.createElement("script");
@@ -42,6 +44,10 @@ export default createComponent({
             },
             changeTab(n: number) {
                 s.currentTab = n;
+            },
+            addFormula(s: string) {
+                console.log(ace.value.reload());
+                console.log(ace.value.getCursorPosition());
             }
         };
 
@@ -57,9 +63,9 @@ export default createComponent({
             { lazy: true }
         );
 
-        const navItems = navigation();
+        // const navItems = navigation();
 
-        return { ...toRefs(s), ...f, navItems };
+        return { ...toRefs(s), ...f, ace };
     }
 });
 
