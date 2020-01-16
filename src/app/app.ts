@@ -7,10 +7,22 @@ export default createComponent({
         const s = reactive({
             fontFamilySelect: "",
             fontSizeSelect: "",
-            formula: "\\frac{a}{1-aa^2}",
+            formula: "\\theta = n \\times 137.508^circ,",
             editor: ref(null),
-            currentTab: ref(1)
+            currentTab: ref(1),
+            config: {
+                lang: "latex",
+                autoCompletion: true,
+                theme: "dreamweaver",
+                tabSize: 4,
+                cursorPosition: { row: 0, column: 0 },
+                // set page position (scroll).
+                pagePosition: 0
+            },
+            code: "code"
         });
+
+        const ace = ref(null);
 
         var head = document.getElementsByTagName("head")[0],
             script;
@@ -36,6 +48,10 @@ export default createComponent({
             },
             changeTab(n: number) {
                 s.currentTab = n;
+            },
+            addFormula(str: string) {
+                const position = ace.value.$ace.selection.getCursor();
+                ace.value.$ace.session.insert(position, str);
             }
         };
 
@@ -51,22 +67,22 @@ export default createComponent({
             { lazy: true }
         );
 
-        const navItems = navigation();
+        // const navItems = navigation();
 
-        return { ...toRefs(s), ...f, navItems };
+        return { ...toRefs(s), ...f, ace };
     }
 });
 
-function navigation() {
-    return [
-        { image1: "@/assets/svg/1.svg?data", image2: "margin-left:25px;", style: "@/assets/svg/2.svg" },
-        { image1: "@/assets/svg/3.svg?data", image2: "margin-left:8px;", style: "@/assets/svg/4.svg" },
-        { image1: "@/assets/svg/5.svg", image2: "margin-left:8px;", style: "@/assets/svg/5.svg" },
-        { image1: "", image2: "", style: "" },
-        { image1: "", image2: "", style: "" },
-        { image1: "", image2: "", style: "" },
-        { image1: "", image2: "", style: "" },
-        { image1: "", image2: "", style: "" },
-        { image1: "", image2: "", style: "" }
-    ];
-}
+// function navigation() {
+//     return [
+//         { image1: "@/assets/svg/1.svg?data", image2: "margin-left:25px;", style: "@/assets/svg/2.svg" },
+//         { image1: "@/assets/svg/3.svg?data", image2: "margin-left:8px;", style: "@/assets/svg/4.svg" },
+//         { image1: "@/assets/svg/5.svg", image2: "margin-left:8px;", style: "@/assets/svg/5.svg" },
+//         { image1: "", image2: "", style: "" },
+//         { image1: "", image2: "", style: "" },
+//         { image1: "", image2: "", style: "" },
+//         { image1: "", image2: "", style: "" },
+//         { image1: "", image2: "", style: "" },
+//         { image1: "", image2: "", style: "" }
+//     ];
+// }

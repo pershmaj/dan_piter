@@ -7,7 +7,9 @@ import bootstrap from "bootstrap";
 import VueBootstrap from "bootstrap-vue";
 import "bootstrap/dist/css/bootstrap.css";
 const math = require("mathjax");
+import AceEditor from "vue-editor-ace";
 
+Vue.use(AceEditor);
 Vue.use(VueBootstrap);
 Vue.use(CompositionApi);
 

@@ -94,7 +94,7 @@
                 </div>
                 <div class="container-big__line">
                     <div class="block block-small">
-                        <img src="@/assets/svg/a3.svg" />
+                        <img @click="addFormula('\\sin')" src="@/assets/svg/a3.svg" />
                     </div>
                     <div class="block block-small">
                         <img src="@/assets/svg/a4.svg" />
@@ -211,7 +211,6 @@
     </div>
     <div class="code">
         <div class="header">Представление формулы нa LaTeX</div>
-
-        <b-form-input v-model="formula"></b-form-input>
+        <AceEditor id="code" :editorId="code" ref="ace" class="body" v-model="formula" :config="config" />
     </div>
 </div>
