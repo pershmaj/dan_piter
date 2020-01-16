@@ -14,8 +14,12 @@ export default createComponent({
                 lang: "latex",
                 autoCompletion: true,
                 theme: "dreamweaver",
-                tabSize: 4
-            }
+                tabSize: 4,
+                cursorPosition: { row: 0, column: 0 },
+                // set page position (scroll).
+                pagePosition: 0
+            },
+            code: "code"
         });
 
         const ace = ref(null);
@@ -45,9 +49,9 @@ export default createComponent({
             changeTab(n: number) {
                 s.currentTab = n;
             },
-            addFormula(s: string) {
-                console.log(ace.value.reload());
-                console.log(ace.value.getCursorPosition());
+            addFormula(str: string) {
+                const position = ace.value.$ace.selection.getCursor();
+                ace.value.$ace.session.insert(position, str);
             }
         };
 
