@@ -54,6 +54,9 @@
             <div @click="changeTab(9)" :class="currentTab === 9? 'tools__tabs-item_picked': ''" class="tools__tabs-item">
                 <img src="@/assets/svg/tab9.svg" width="44px" class="tools__tabs-item-icon" />
             </div>
+            <div @click="changeTab(10)" :class="currentTab === 9? 'tools__tabs-item_picked': ''" class="tools__tabs-item">
+                <img src="@/assets/svg/tab9.svg" width="44px" class="tools__tabs-item-icon" />
+            </div>
         </div>
 
         <div v-show="currentTab===1" class="tools__body">
@@ -121,787 +124,597 @@
             </ul>
         </div>
         <div v-show="currentTab===2" class="tools__body">
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('\\not{x}')" class="block block-small">
-                        <img src="@/assets/svg/2-1-1.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('+')" class="block block-small">
-                        <img src="@/assets/svg/2-2-1.svg" />
-                    </div>
-                    <div @click="addFormula('\\times')" class="block block-small">
-                        <img src="@/assets/svg/2-2-2.svg" />
-                    </div>
-                    <div @click="addFormula('\\cdot')" class="block block-small">
-                        <img src="@/assets/svg/2-2-3.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('-')" class="block block-small">
-                        <img src="@/assets/svg/2-2-4.svg" />
-                    </div>
-                    <div @click="addFormula('\\div')" class="block block-small">
-                        <img src="@/assets/svg/2-2-5.svg" />
-                    </div>
-                    <div @click="addFormula('\\slash')" class="block block-small">
-                        <img src="@/assets/svg/2-2-6.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('\\pm')" class="block block-small">
-                        <img src="@/assets/svg/2-2-7.svg" />
-                    </div>
-                    <div @click="addFormula('*')" class="block block-small">
-                        <img src="@/assets/svg/2-2-8.svg" />
-                    </div>
-                    <div @click="addFormula('\\smwhtcircle')" class="block block-small">
-                        <img src="@/assets/svg/2-2-9.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
-
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('\\pi')" class="block block-small">
-                        <img src="@/assets/svg/2-3-1.svg" />
-                    </div>
-                    <div @click="addFormula('\\delta')" class="block block-small">
-                        <img src="@/assets/svg/2-3-2.svg" />
-                    </div>
-                    <div @click="addFormula('\\degree')" class="block block-small">
-                        <img src="@/assets/svg/2-3-3.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('\\infty')" class="block block-small">
-                        <img src="@/assets/svg/2-3-4.svg" />
-                    </div>
-                    <div @click="addFormula('\\Delta')" class="block block-small">
-                        <img src="@/assets/svg/2-3-5.svg" />
-                    </div>
-                    <div @click="addFormula('\'')" class="block block-small">
-                        <img src="@/assets/svg/2-3-6.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('\\emptyset')" class="block block-small">
-                        <img src="@/assets/svg/2-3-7.svg" />
-                    </div>
-                    <div @click="addFormula('\\nabla')" class="block block-small">
-                        <img src="@/assets/svg/2-3-8.svg" />
-                    </div>
-                    <div @click="addFormula('\???')" class="block block-small">
-                        <img src="@/assets/svg/2-3-9.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
-
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('+')" class="block block-small">
-                        <img src="@/assets/svg/2-4-1.svg" />
-                    </div>
-                    <div @click="addFormula('/')" class="block block-small">
-                        <img src="@/assets/svg/2-4-2.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('\\times')" class="block block-small">
-                        <img src="@/assets/svg/2-4-3.svg" />
-                    </div>
-                    <div @click="addFormula('\\pm')" class="block block-small">
-                        <img src="@/assets/svg/2-4-4.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('-')" class="block block-small">
-                        <img src="@/assets/svg/2-4-5.svg" />
-                    </div>
-                    <div @click="addFormula('\\div')" class="block block-small">
-                        <img src="@/assets/svg/2-4-6.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
-
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('+')" class="block block-small">
-                        <img src="@/assets/svg/2-5-1.svg" />
-                    </div>
-                    <div @click="addFormula('/')" class="block block-small">
-                        <img src="@/assets/svg/2-5-2.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('\\times')" class="block block-small">
-                        <img src="@/assets/svg/2-5-3.svg" />
-                    </div>
-                    <div @click="addFormula('\\pm')" class="block block-small">
-                        <img src="@/assets/svg/2-5-4.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('-')" class="block block-small">
-                        <img src="@/assets/svg/2-5-5.svg" />
-                    </div>
-                    <div @click="addFormula('\\div')" class="block block-small">
-                        <img src="@/assets/svg/2-5-6.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
-
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('+')" class="block block-small">
-                        <img src="@/assets/svg/2-6-1.svg" />
-                    </div>
-                    <div @click="addFormula('/')" class="block block-small">
-                        <img src="@/assets/svg/2-6-2.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('\\times')" class="block block-small">
-                        <img src="@/assets/svg/2-6-3.svg" />
-                    </div>
-                    <div @click="addFormula('\\pm')" class="block block-small">
-                        <img src="@/assets/svg/2-6-4.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('-')" class="block block-small">
-                        <img src="@/assets/svg/2-6-5.svg" />
-                    </div>
-                    <div @click="addFormula('\\div')" class="block block-small">
-                        <img src="@/assets/svg/2-6-6.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
+            <ul class="keyboard">
+                <li class="tab">$\int$</li>
+                <li class="tab">$\int_{a}^{b}$</li>
+                <li class="tab">$\oint$</li>
+                <li class="tab">$\oint_a^b$</li>
+                <li class="tab">$\sum$</li>
+                <li class="tab">$\sum_a^b$</li>
+                <li class="tab">$\coprod$</li>
+                <li class="tab">$\coprod_a^b$</li>
+                <li class="tab">$\prod$</li>
+                <li class="tab">$\prod_a^b$</li>
+                <li class="tab">$\bigcap$</li>
+                <li class="tab">$\bigcap_a^b$</li>
+                <li class="tab">$\bigcup$</li>
+                <li class="tab">$\bigcup_a^b$</li>
+                <li class="tab">$\bigsqcup$</li>
+                <li class="tab">$\bigsqcup_a^b$</li>
+                <li class="tab">$\bigvee$</li>
+                <li class="tab">$\bigvee_a^b$</li>
+                <li class="tab">$\bigwedge$</li>
+                <li class="tab">$\bigwedge_a^b$</li>
+                <li class="tab">$\sqrt{ab}$</li>
+                <li class="tab">$\sqrt[n]{ab}$</li>
+                <li class="tab">$\log_{a}{b}$</li>
+                <li class="tab">$\lg{ab}$</li>
+                <li class="tab">$a^{b}$</li>
+                <li class="tab">$a_{b}$</li>
+                <li class="tab">$x_a^b$</li>
+                <li class="tab">$\widetilde{ab}$</li>
+                <li class="tab">$\widehat{ab}$</li>
+                <li class="tab">$\overleftarrow{ab}$</li>
+                <li class="tab">$\overrightarrow{ab}$</li>
+                <li class="tab">$\overbrace{ab}$</li>
+                <li class="tab">$\underbrace{ab}$</li>
+                <li class="tab">$\underline{ab}$</li>
+                <li class="tab">$\overline{ab}$</li>
+                <li class="tab">$\frac{ab}{cd}$</li>
+                <li class="tab">$\frac{\partial a}{\partial b}$</li>
+                <li class="tab">$\frac{\text{d}x}{\text{d}y}$</li>
+                <li class="tab">$\lim_{a \rightarrow b}$</li>
+                </ul>
         </div>
         <div v-show="currentTab===3" class="tools__body">
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('+')" class="block block-small">
-                        <img src="@/assets/svg/3-1-1.svg" />
-                    </div>
-                    <div @click="addFormula('/')" class="block block-small">
-                        <img src="@/assets/svg/3-1-2.svg" />
-                    </div>
-                    <div @click="addFormula('/')" class="block block-small">
-                        <img src="@/assets/svg/3-1-3.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('\\times')" class="block block-small">
-                        <img src="@/assets/svg/3-1-4.svg" />
-                    </div>
-                    <div @click="addFormula('\\pm')" class="block block-small">
-                        <img src="@/assets/svg/3-1-5.svg" />
-                    </div>
-                    <div @click="addFormula('/')" class="block block-small">
-                        <img src="@/assets/svg/3-1-6.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('-')" class="block block-small">
-                        <img src="@/assets/svg/3-1-7.svg" />
-                    </div>
-                    <div @click="addFormula('\\div')" class="block block-small">
-                        <img src="@/assets/svg/3-1-8.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('+')" class="block block-small">
-                        <img src="@/assets/svg/3-2-1.svg" />
-                    </div>
-                    <div @click="addFormula('/')" class="block block-small">
-                        <img src="@/assets/svg/3-2-2.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('\\times')" class="block block-small">
-                        <img src="@/assets/svg/3-2-3.svg" />
-                    </div>
-                    <div @click="addFormula('\\pm')" class="block block-small">
-                        <img src="@/assets/svg/3-2-4.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('-')" class="block block-small">
-                        <img src="@/assets/svg/3-2-5.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('+')" class="block block-small">
-                        <img src="@/assets/svg/3-3-1.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('\\times')" class="block block-small">
-                        <img src="@/assets/svg/3-3-2.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('-')" class="block block-small">
-                        <img src="@/assets/svg/3-3-3.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
-
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('\\frac{2}{4}')" class="block block-big">
-                        <img src="@/assets/svg/3-4-1.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt{2}')" class="block block-big">
-                        <img src="@/assets/svg/3-4-2.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt{2}')" class="block block-big">
-                        <img src="@/assets/svg/3-4-4.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('/')" class="block block-big">
-                        <img src="@/assets/svg/3-4-3.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt[2]{4}')" class="block block-big">
-                        <img src="@/assets/svg/3-4-4.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt{2}')" class="block block-big">
-                        <img src="@/assets/svg/3-4-6.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
-
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('\\frac{2}{4}')" class="block block-big">
-                        <img src="@/assets/svg/3-4-1.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt{2}')" class="block block-big">
-                        <img src="@/assets/svg/3-4-2.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('/')" class="block block-big">
-                        <img src="@/assets/svg/3-4-3.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt[2]{4}')" class="block block-big">
-                        <img src="@/assets/svg/3-4-4.svg" />
-                    </div>
-                </div>
-            </div>
+            <ul class="keyboard">
+                <li class="bigtab">$\displaystyle\sum\limits_{i=0}^n i^3$</li>
+                <li class="bigtab">$\left(\begin{array}{c}a\\ b\end{array}\right)$</li>
+                <li class="bigtab">$\left(\frac{a^2}{b^3}\right)$</li>
+                <li class="bigtab">$\left.\frac{a^3}{3}\right|_0^1$</li>
+                <li class="bigtab">$\begin{bmatrix}a &amp; b \\c &amp; d \end{bmatrix}$</li>
+                <li class="bigtab">$\begin{cases}a &amp; x = 0\\b &amp; x &gt; 0\end{cases}$</li>
+                <li class="bigtab">$\sqrt{\frac{n}{n-1} S}$</li>
+                <li class="bigtab">$\begin{pmatrix} \alpha&amp; \beta^{*}\\ \gamma^{*}&amp; \delta \end{pmatrix}$</li>
+                <li class="bigtab">$A\:\xleftarrow{n+\mu-1}\:B$</li>
+                <li class="bigtab">$B\:\xrightarrow[T]{n\pm i-1}\:C$</li>
+                <li class="bigtab">$\frac{1}{k}\log_2 c(f)\;$</li>
+                <li class="bigtab">$\iint\limits_A f(x,y)\;$</li>
+                <li class="bigtab">$x^n + y^n = z^n$</li>
+                <li class="bigtab">$E=mc^2$</li>
+                <li class="bigtab">$e^{\pi i} - 1 = 0$</li>
+                <li class="bigtab">$p(x) = 3x^6$</li>
+                <li class="bigtab">$3x + y =  12$</li>
+                <li class="bigtab">$\int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x$</li>
+                <li class="bigtab">$\sqrt[n]{1+x+x^2+\ldots}$</li>
+                <li class="bigtab">$\binom{x}{y} = \frac{x!}{y!(x-y)!}$</li>
+                <li class="bigtab">$\frac{\frac{1}{x}+\frac{1}{y}}{y-z}$</li>
+                <li class="bigtab">$f(x)=\frac{P(x)}{Q(x)}$</li>
+                <li class="bigtab">$\frac{1+\frac{a}{b}}{1+\frac{1}{1+\frac{1}{a}}}$</li>
+                <li class="bigtab">$\sum_{\substack{0\le i\le m\\ 0\lt j\lt n}} P(i,j)$</li>
+                <li class="bigtab medium">$\lim_{x \to \infty} \exp(-x) = 0$</li>
+                <li class="bigtab medium">$\cos (2\theta) = \cos^2 \theta - \sin^2 \theta$</li>
+                </ul>
         </div>
         <div v-show="currentTab===4" class="tools__body">
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('\\alpha')" class="block block-small">
-                        <img src="@/assets/svg/4-1-1.svg" />
-                    </div>
-                    <div @click="addFormula('\\beta')" class="block block-small">
-                        <img src="@/assets/svg/4-1-2.svg" />
-                    </div>
-                    <div @click="addFormula('\\gamma')" class="block block-small">
-                        <img src="@/assets/svg/4-1-3.svg" />
-                    </div>
-                    <div @click="addFormula('\\delta')" class="block block-small">
-                        <img src="@/assets/svg/4-1-4.svg" />
-                    </div>
-                    <div @click="addFormula('\\varepsilon')" class="block block-small">
-                        <img src="@/assets/svg/4-1-5.svg" />
-                    </div>
-                    <div @click="addFormula('\\zeta')" class="block block-small">
-                        <img src="@/assets/svg/4-1-6.svg" />
-                    </div>
-                    <div @click="addFormula('\\eta')" class="block block-small">
-                        <img src="@/assets/svg/4-1-7.svg" />
-                    </div>
-                    <div @click="addFormula('\\theta')" class="block block-small">
-                        <img src="@/assets/svg/4-1-8.svg" />
-                    </div>
-                    <div @click="addFormula('\\vartheta')" class="block block-small">
-                        <img src="@/assets/svg/4-1-9.svg" />
-                    </div>
-                    <div @click="addFormula('\\iota')" class="block block-small">
-                        <img src="@/assets/svg/4-1-10.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('\\kappa')" class="block block-small">
-                        <img src="@/assets/svg/4-1-11.svg" />
-                    </div>
-                    <div @click="addFormula('\\lambda')" class="block block-small">
-                        <img src="@/assets/svg/4-1-12.svg" />
-                    </div>
-                    <div @click="addFormula('\\mu')" class="block block-small">
-                        <img src="@/assets/svg/4-1-13.svg" />
-                    </div>
-                    <div @click="addFormula('\\nu')" class="block block-small">
-                        <img src="@/assets/svg/4-1-14.svg" />
-                    </div>
-                    <div @click="addFormula('\\xi')" class="block block-small">
-                        <img src="@/assets/svg/4-1-15.svg" />
-                    </div>
-                    <div @click="addFormula('?')" class="block block-small">
-                        <img src="@/assets/svg/4-1-16.svg" />
-                    </div>
-                    <div @click="addFormula('\\pi')" class="block block-small">
-                        <img src="@/assets/svg/4-1-17.svg" />
-                    </div>
-                    <div @click="addFormula('?')" class="block block-small">
-                        <img src="@/assets/svg/4-1-18.svg" />
-                    </div>
-                    <div @click="addFormula('\\rho')" class="block block-small">
-                        <img src="@/assets/svg/4-1-19.svg" />
-                    </div>
-                    <div @click="addFormula('\\varsigma')" class="block block-small">
-                        <img src="@/assets/svg/4-1-20.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('\\sigma')" class="block block-small">
-                        <img src="@/assets/svg/4-1-21.svg" />
-                    </div>
-                    <div @click="addFormula('\\tau')" class="block block-small">
-                        <img src="@/assets/svg/4-1-22.svg" />
-                    </div>
-                    <div @click="addFormula('\\upsilon')" class="block block-small">
-                        <img src="@/assets/svg/4-1-23.svg" />
-                    </div>
-                    <div @click="addFormula('\\varphi')" class="block block-small">
-                        <img src="@/assets/svg/4-1-24.svg" />
-                    </div>
-                    <div @click="addFormula('\\phi')" class="block block-small">
-                        <img src="@/assets/svg/4-1-25.svg" />
-                    </div>
-                    <div @click="addFormula('\\chi')" class="block block-small">
-                        <img src="@/assets/svg/4-1-26.svg" />
-                    </div>
-                    <div @click="addFormula('\\psi')" class="block block-small">
-                        <img src="@/assets/svg/4-1-27.svg" />
-                    </div>
-                    <div @click="addFormula('\\omega')" class="block block-small">
-                        <img src="@/assets/svg/4-1-28.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
-
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('+')" class="block block-small">
-                        <img src="@/assets/svg/4-2-1.svg" />
-                    </div>
-                    <div @click="addFormula('/')" class="block block-small">
-                        <img src="@/assets/svg/4-2-2.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('\\times')" class="block block-small">
-                        <img src="@/assets/svg/4-2-3.svg" />
-                    </div>
-                    <div @click="addFormula('\\pm')" class="block block-small">
-                        <img src="@/assets/svg/4-2-4.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('-')" class="block block-small">
-                        <img src="@/assets/svg/4-2-5.svg" />
-                    </div>
-                    <div @click="addFormula('\\div')" class="block block-small">
-                        <img src="@/assets/svg/4-2-6.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
+            <ul class="keyboard">
+                <li class="letter">$\uparrow$</li>
+                <li class="letter">$\downarrow$</li>
+                <li class="letter">$\updownarrow$</li>
+                <li class="letter">$\Uparrow$</li>
+                <li class="letter">$\Downarrow$</li>
+                <li class="letter">$\Leftarrow$</li>
+                <li class="letter">$\Rightarrow$</li>
+                <li class="letter">$\Leftrightarrow$</li>
+                <li class="letter">$\nLeftrightarrow$</li>
+                <li class="letter">$\nLeftarrow$</li>
+                <li class="letter">$\nRightarrow$</li>
+                <li class="letter">$\Updownarrow$</li>
+                <li class="letter">$\circlearrowleft$</li>
+                <li class="letter">$\circlearrowright$</li>
+                <li class="letter">$\Lleftarrow$</li>
+                <li class="letter">$\Rrightarrow$</li>
+                <li class="letter">$\nwarrow$</li>
+                <li class="letter">$\swarrow$</li>
+                <li class="letter">$\searrow$</li>
+                <li class="letter">$\nearrow$</li>
+                <li class="letter">$\longleftarrow$</li>
+                <li class="letter">$\longrightarrow$</li>
+                <li class="letter">$\rightarrow$</li>
+                <li class="letter">$\leftarrow$</li>
+                <li class="letter">$\mapsto$</li>
+                <li class="letter">$\nrightarrow$</li>
+                <li class="letter">$\nleftarrow$</li>
+                <li class="letter">$\rightrightarrows$</li>
+                <li class="letter">$\leftleftarrows$</li>
+                <li class="letter">$\rightleftarrows$</li>
+                <li class="letter">$\leftrightarrows$</li>
+                <li class="letter">$\curvearrowleft$</li>
+                <li class="letter">$\curvearrowright$</li>
+                <li class="letter">$\Longleftarrow$</li>
+                <li class="letter">$\Longrightarrow$</li>
+                <li class="letter">$\longleftrightarrow$</li>
+                <li class="letter">$\Longleftrightarrow$</li>
+                <li class="letter">$\longmapsto$</li>
+                <li class="letter">$\rightarrowtail$</li>
+                <li class="letter">$\leftarrowtail$</li>
+                <li class="letter">$\downdownarrows$</li>
+                <li class="letter">$\upuparrows$</li>
+                <li class="letter">$\rightharpoondown$</li>
+                <li class="letter">$\downharpoonleft$</li>
+                <li class="letter">$\rightharpoonup$</li>
+                <li class="letter">$\downharpoonright$</li>
+                <li class="letter">$\upharpoonleft$</li>
+                <li class="letter">$\upharpoonright$</li>
+                <li class="letter">$\leftharpoondown$</li>
+                <li class="letter">$\leftharpoonup$</li>
+                <li class="letter">$\hookleftarrow$</li>
+                <li class="letter">$\hookrightarrow$</li>
+                <li class="letter">$\rightleftharpoons$</li>
+                <li class="letter">$\leftrightharpoons$</li>
+                <li class="letter">$\looparrowleft$</li>
+                <li class="letter">$\looparrowright$</li>
+                <li class="letter">$\rightsquigarrow$</li>
+                <li class="letter">$\Lsh$</li>
+                <li class="letter">$\Rsh$</li>
+                <li class="letter">$\multimap$</li>
+                <li class="letter">$\twoheadleftarrow$</li>
+                <li class="letter">$\twoheadrightarrow$</li>
+                <li class="letter">$\leftrightarrow$</li>
+                <li class="letter">$\nleftrightarrow$</li>
+                <li class="letter">$\leftrightsquigarrow$</li>
+                </ul>
         </div>
         <div v-show="currentTab===5" class="tools__body">
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('\\frac{2}{4}')" class="block block-big">
-                        <img src="@/assets/svg/5-1-1.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt{2}')" class="block block-big">
-                        <img src="@/assets/svg/5-1-2.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('/')" class="block block-big">
-                        <img src="@/assets/svg/5-1-3.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt[2]{4}')" class="block block-big">
-                        <img src="@/assets/svg/5-1-4.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('\\frac{2}{4}')" class="block block-big">
-                        <img src="@/assets/svg/5-1-1.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt{2}')" class="block block-big">
-                        <img src="@/assets/svg/5-1-2.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt{2}')" class="block block-big">
-                        <img src="@/assets/svg/5-1-2.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('/')" class="block block-big">
-                        <img src="@/assets/svg/5-1-3.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt[2]{4}')" class="block block-big">
-                        <img src="@/assets/svg/5-1-4.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt{2}')" class="block block-big">
-                        <img src="@/assets/svg/5-1-2.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('\\frac{2}{4}')" class="block block-big">
-                        <img src="@/assets/svg/5-1-1.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt{2}')" class="block block-big">
-                        <img src="@/assets/svg/5-1-2.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('/')" class="block block-big">
-                        <img src="@/assets/svg/5-1-3.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt[2]{4}')" class="block block-big">
-                        <img src="@/assets/svg/5-1-4.svg" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="vertical-line"></div>
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('\\frac{2}{4}')" class="block block-big">
-                        <img src="@/assets/svg/5-4-1.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt{2}')" class="block block-big">
-                        <img src="@/assets/svg/5-4-2.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('/')" class="block block-big">
-                        <img src="@/assets/svg/5-4-3.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt[2]{4}')" class="block block-big">
-                        <img src="@/assets/svg/5-4-4.svg" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="vertical-line"></div>
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('\\frac{2}{4}')" class="block block-big">
-                        <img src="@/assets/svg/5-1-2.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('/')" class="block block-big">
-                        <img src="@/assets/svg/5-5-2.svg" />
-                    </div>
-                </div>
-            </div>
+            <ul class="keyboard">
+                <li class="letter">$\aleph$</li>
+                <li class="letter">$\Gamma$</li>
+                <li class="letter">$\alpha$</li>
+                <li class="letter">$\xi$</li>
+                <li class="letter">$\digamma$</li>
+                <li class="letter">$\Delta$</li>
+                <li class="letter">$\beta$</li>
+                <li class="letter">$\pi$</li>
+                <li class="letter">$\varepsilon$</li>
+                <li class="letter">$\Lambda$</li>
+                <li class="letter">$\gamma$</li>
+                <li class="letter">$\rho$</li>
+                <li class="letter">$\varkappa$</li>
+                <li class="letter">$\Phi$</li>
+                <li class="letter">$\delta$</li>
+                <li class="letter">$\sigma$</li>
+                <li class="letter">$\varphi$</li>
+                <li class="letter">$\Pi$</li>
+                <li class="letter">$\epsilon$</li>
+                <li class="letter">$\tau$</li>
+                <li class="letter">$\varpi$</li>
+                <li class="letter">$\Psi$</li>
+                <li class="letter">$\zeta$</li>
+                <li class="letter">$\upsilon$</li>
+                <li class="letter">$\varrho$</li>
+                <li class="letter">$\Sigma$</li>
+                <li class="letter">$\eta$</li>
+                <li class="letter">$\phi$</li>
+                <li class="letter">$\varsigma$</li>
+                <li class="letter">$\Theta$</li>
+                <li class="letter">$\theta$</li>
+                <li class="letter">$\chi$</li>
+                <li class="letter">$\vartheta$</li>
+                <li class="letter">$\Upsilon$</li>
+                <li class="letter">$\iota$</li>
+                <li class="letter">$\psi$</li>
+                <li class="letter">$\Xi$</li>
+                <li class="letter">$\kappa$</li>
+                <li class="letter">$\omega$</li>
+                <li class="letter">$\Omega$</li>
+                <li class="letter">$\lambda$</li>
+                <li class="letter">$\mu$</li>
+                <li class="letter">$\nu$</li>
+                <li class="letter">$\complement$</li>
+                <li class="letter">$\hslash$</li>
+                <li class="letter">$\circledS$</li>
+                <li class="letter">$\Im$</li>
+                <li class="letter">$\beth$</li>
+                <li class="letter">$\ell$</li>
+                <li class="letter">$\mho$</li>
+                <li class="letter">$\Bbbk$</li>
+                <li class="letter">$\Re$</li>
+                <li class="letter">$\daleth$</li>
+                <li class="letter">$\eth$</li>
+                <li class="letter">$\partial$</li>
+                <li class="letter">$\Finv$</li>
+                <li class="letter">$\gimel$</li>
+                <li class="letter">$\hbar$</li>
+                <li class="letter">$\wp$</li>
+                <li class="letter lastitem">$\Game$</li>
+                </ul>
         </div>
         <div v-show="currentTab===6" class="tools__body">
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('\\frac{2}{4}')" class="block block-big">
-                        <img src="@/assets/svg/6-1-1.svg" />
-                    </div>
-                    <div @click="addFormula('\\tfrac{2}{4}')" class="block block-big">
-                        <img src="@/assets/svg/6-1-2.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('//sqrt{x}')" class="block block-big">
-                        <img src="@/assets/svg/6-1-3.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt[2]{4}')" class="block block-big">
-                        <img src="@/assets/svg/6-1-4.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('\\sqrt{4}')" class="block block-big">
-                        <img src="@/assets/svg/6-2-1.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('\\sqrt[2]{4}')" class="block block-big">
-                        <img src="@/assets/svg/6-2-1.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
-
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('^x')" class="block block-big">
-                        <img src="@/assets/svg/6-3-1.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt{2}')" class="block block-big">
-                        <img src="@/assets/svg/6-3-2.svg" />
-                    </div>
-                    <div @click="addFormula('_x')" class="block block-big">
-                        <img src="@/assets/svg/6-3-3.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('/')" class="block block-big">
-                        <img src="@/assets/svg/6-3-4.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt[2]{4}')" class="block block-big">
-                        <img src="@/assets/svg/6-3-5.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt{2}')" class="block block-big">
-                        <img src="@/assets/svg/6-3-6.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
+            <ul class="keyboard">
+                <li class="letter">$\#$</li>
+                <li class="letter">$\clubsuit$</li>
+                <li class="letter">$\lozenge$</li>
+                <li class="letter">$\square$</li>
+                <li class="letter">$\&amp;$</li>
+                <li class="letter">$\diagdown$</li>
+                <li class="letter">$\measuredangle$</li>
+                <li class="letter">$\surd$</li>
+                <li class="letter">$\angle$</li>
+                <li class="letter">$\diagup$</li>
+                <li class="letter">$\nabla$</li>
+                <li class="letter">$\top$</li>
+                <li class="letter">$\backprime$</li>
+                <li class="letter">$\diamondsuit$</li>
+                <li class="letter">$\natural$</li>
+                <li class="letter">$\triangle$</li>
+                <li class="letter">$\bigstar$</li>
+                <li class="letter">$\emptyset$</li>
+                <li class="letter">$\neg$</li>
+                <li class="letter">$\triangledown$</li>
+                <li class="letter">$\blacklozenge$</li>
+                <li class="letter">$\exists$</li>
+                <li class="letter">$\nexists$</li>
+                <li class="letter">$\varnothing$</li>
+                <li class="letter">$\blacksquare$</li>
+                <li class="letter">$\flat$</li>
+                <li class="letter">$\prime$</li>
+                <li class="letter">$\blacktriangle$</li>
+                <li class="letter">$\forall$</li>
+                <li class="letter">$\sharp$</li>
+                <li class="letter">$\blacktriangledown$</li>
+                <li class="letter">$\heartsuit$</li>
+                <li class="letter">$\spadesuit$</li>
+                <li class="letter">$\bot$</li>
+                <li class="letter">$\infty$</li>
+                <li class="letter">$\sphericalangle$</li>
+                </ul>
         </div>
         <div v-show="currentTab===7" class="tools__body">
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('\\frac{2}{4}')" class="block block-big">
-                        <img src="@/assets/svg/7-1-1.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt{2}')" class="block block-big">
-                        <img src="@/assets/svg/7-1-2.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt{2}')" class="block block-big">
-                        <img src="@/assets/svg/7-1-3.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('/')" class="block block-big">
-                        <img src="@/assets/svg/7-1-4.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt[2]{4}')" class="block block-big">
-                        <img src="@/assets/svg/7-1-5.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt{2}')" class="block block-big">
-                        <img src="@/assets/svg/7-1-6.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
+            <ul class="keyboard">
+                <li class="letter">$\mp$</li>
+                <li class="letter">$\doteqdot$</li>
+                <li class="letter">$\gtrless$</li>
+                <li class="letter">$\doublebarwedge$</li>
+                <li class="letter">$\gtrdot$</li>
+                <li class="letter">$\eqsim$</li>
+                <li class="letter">$\gvertneqq$</li>
+                <li class="letter">$\ngeqq$</li>
+                <li class="letter">$\leqq$</li>
+                <li class="letter">$\ngtr$</li>
+                <li class="letter">$\sim$</li>
+                <li class="letter">$\circ$</li>
+                <li class="letter">$\intercal$</li>
+                <li class="letter">$\amalg$</li>
+                <li class="letter">$\circledast$</li>
+                <li class="letter">$\leftthreetimes$</li>
+                <li class="letter">$\star$</li>
+                <li class="letter">$\ast$</li>
+                <li class="letter">$\circledcirc$</li>
+                <li class="letter">$\lessdot$</li>
+                <li class="letter">$\barwedge$</li>
+                <li class="letter">$\circleddash$</li>
+                <li class="letter">$\ltimes$</li>
+                <li class="letter">$\bigcirc$</li>
+                <li class="letter">$\odot$</li>
+                <li class="letter">$\uplus$</li>
+                <li class="letter">$\curlyvee$</li>
+                <li class="letter">$\ominus$</li>
+                <li class="letter">$\vee$</li>
+                <li class="letter">$\boxdot$</li>
+                <li class="letter">$\curlywedge$</li>
+                <li class="letter">$\oplus$</li>
+                <li class="letter">$\veebar$</li>
+                <li class="letter">$\boxminus$</li>
+                <li class="letter">$\dagger$</li>
+                <li class="letter">$\oslash$</li>
+                <li class="letter">$\wedge$</li>
+                <li class="letter">$\boxplus$</li>
+                <li class="letter">$\ddagger$</li>
+                <li class="letter">$\otimes$</li>
+                <li class="letter">$\wr$</li>
+                <li class="letter">$\boxtimes$</li>
+                <li class="letter">$\diamond$</li>
+                <li class="letter">$\pm$</li>
+                <li class="letter">$\bullet$</li>
+                <li class="letter">$\rightthreetimes$</li>
+                <li class="letter">$\divideontimes$</li>
+                <li class="letter">$\rtimes$</li>
+                <li class="letter">$\dotplus$</li>
+                <li class="letter">$\setminus$</li>
+                <li class="letter">$\eqslantless$</li>
+                <li class="letter">$\equiv$</li>
+                <li class="letter">$\leqslant$</li>
+                <li class="letter">$\nleq$</li>
+                <li class="letter">$\simeq$</li>
+                <li class="letter">$&gt;$</li>
+                <li class="letter">$\fallingdotseq$</li>
+                <li class="letter">$\lessapprox$</li>
+                <li class="letter">$\lesseqgtr$</li>
+                <li class="letter">$\nleqslant$</li>
+                <li class="letter">$\nleqq$</li>
+                <li class="letter">$\succ$</li>
+                <li class="letter">$\approx$</li>
+                <li class="letter">$\geq$</li>
+                <li class="letter">$\succapprox$</li>
+                <li class="letter">$\approxeq$</li>
+                <li class="letter">$\geqq$</li>
+                <li class="letter">$\lesseqqgtr$</li>
+                <li class="letter">$\nless$</li>
+                <li class="letter">$\succcurlyeq$</li>
+                <li class="letter">$\asymp$</li>
+                <li class="letter">$\geqslant$</li>
+                <li class="letter">$\lessgtr$</li>
+                <li class="letter">$\nprec$</li>
+                <li class="letter">$\succeq$</li>
+                <li class="letter">$\backsim$</li>
+                <li class="letter">$\gg$</li>
+                <li class="letter">$\lesssim$</li>
+                <li class="letter">$\npreceq$</li>
+                <li class="letter">$\succnapprox$</li>
+                <li class="letter">$\backsimeq$</li>
+                <li class="letter">$\ggg$</li>
+                <li class="letter">$\ll$</li>
+                <li class="letter">$\nsim$</li>
+                <li class="letter">$\succneqq$</li>
+                <li class="letter">$\bumpeq$</li>
+                <li class="letter">$\gnapprox$</li>
+                <li class="letter">$\lll$</li>
+                <li class="letter">$\nsucc$</li>
+                <li class="letter">$\succnsim$</li>
+                <li class="letter">$\Bumpeq$</li>
+                <li class="letter">$\gneq$</li>
+                <li class="letter">$\lnapprox$</li>
+                <li class="letter">$\nsucceq$</li>
+                <li class="letter">$\succsim$</li>
+                <li class="letter">$\circeq$</li>
+                <li class="letter">$\gneqq$</li>
+                <li class="letter">$\lneq$</li>
+                <li class="letter">$\prec$</li>
+                <li class="letter">$\thickapprox$</li>
+                <li class="letter">$\cong$</li>
+                <li class="letter">$\gnsim$</li>
+                <li class="letter">$\lneqq$</li>
+                <li class="letter">$\precapprox$</li>
+                <li class="letter">$\thicksim$</li>
+                <li class="letter">$\curlyeqprec$</li>
+                <li class="letter">$\gtrapprox$</li>
+                <li class="letter">$\lnsim$</li>
+                <li class="letter">$\preccurlyeq$</li>
+                
+                <li class="letter">$\curlyeqsucc$</li>
+                <li class="letter">$\gtreqless$</li>
+                <li class="letter">$\lvertneqq$</li>
+                <li class="letter">$\preceq$</li>
+                <li class="letter">$\doteq$</li>
+                <li class="letter">$\gtreqqless$</li>
+                <li class="letter">$\ncong$</li>
+                <li class="letter">$\precnapprox$</li>
+                <li class="letter">$\precneqq$</li>
+                <li class="letter">$\eqcirc$</li>
+                <li class="letter">$\gtrsim$</li>
+                <li class="letter">$\ngeq$</li>
+                <li class="letter">$\precnsim$</li>
+                <li class="letter">$\precsim$</li>
+                <li class="letter">$\eqslantgtr$</li>
+                <li class="letter">$\leq$</li>
+                <li class="letter">$\ngeqslant$</li>
+                <li class="letter">$\risingdotseq$</li>
+                <li class="letter">$\backepsilon$</li>
+                <li class="letter">$\smallsmile$</li>
+                <li class="letter">$\therefore$</li>
+                <li class="letter">$\because$</li>
+                <li class="letter">$\smile$</li>
+                <li class="letter">$\between$</li>
+                <li class="letter">$\varpropto$</li>
+                <li class="letter">$\bowtie$</li>
+                <li class="letter">$\dashv$</li>
+                <li class="letter">$\frown$</li>
+                <li class="letter">$\smallfrown$</li>
+                <li class="letter">$\nvdash$</li>
+                <li class="letter">$\in$</li>
+                <li class="letter">$\nVdash$</li>
+                
+                
+                <li class="letter">$\mid$</li>
+                <li class="letter">$\nvDash$</li>
+                
+                
+                <li class="letter">$\models$</li>
+                <li class="letter">$\nVDash$</li>
+                
+                
+                <li class="letter">$\ni$</li>
+                <li class="letter">$\parallel$</li>
+                
+                <li class="letter">$\vdash$</li>
+                <li class="letter">$\nmid$</li>
+                <li class="letter">$\perp$</li>
+                
+                <li class="letter">$\Vdash$</li>
+                <li class="letter">$\notin$</li>
+                <li class="letter">$\pitchfork$</li>
+                
+                <li class="letter">$\vDash$</li>
+                
+                <li class="letter">$\propto$</li>
+                
+                <li class="letter">$\Vvdash$</li>
+                
+                <li class="letter">$\nshortmid$</li>
+                <li class="letter">$\shortmid$</li>
+                <li class="letter">$\nparallel$</li>
+                <li class="letter">$\nshortparallel$</li>
+                <li class="letter">$\shortparallel$</li>
+                
+                <li class="letter">$\triangleleft$</li>
+                <li class="letter">$\vartriangle$</li>
+                <li class="letter">$\triangleright$</li>
+                <li class="letter">$\ntrianglerighteq$</li>
+                <li class="letter">$\vartriangleright$</li>
+                <li class="letter">$\vartriangleleft$</li>
+                <li class="letter">$\ntriangleright$</li>
+                <li class="letter">$\blacktriangleright$</li>
+                <li class="letter">$\ntrianglelefteq$</li>
+                <li class="letter">$\trianglerighteq$</li>
+                <li class="letter">$\blacktriangleleft$</li>
+                <li class="letter">$\ntriangleleft$</li>
+                <li class="letter">$\trianglelefteq$</li>
+                <li class="letter">$\bigtriangledown$</li>
+                <li class="letter">$\bigtriangleup$</li>
+                <li class="letter">$\triangleq$</li>
+                
+                <li class="letter">$\sqcap$</li>
+                <li class="letter">$\sqcup$</li>
+                <li class="letter">$\sqsupset$</li>
+                <li class="letter">$\sqsubset$</li>
+                <li class="letter">$\sqsupseteq$</li>
+                <li class="letter">$\sqsubseteq$</li>
+                
+                <li class="letter">$\Cap$</li>
+                <li class="letter">$\Cup$</li>
+                <li class="letter">$\Subset$</li>
+                <li class="letter">$\Supset$</li>
+                <li class="letter">$\cup$</li>
+                <li class="letter">$\cap$</li>
+                <li class="letter">$\subset$</li>
+                <li class="letter">$\supset$</li>
+                <li class="letter">$\subseteq$</li>
+                <li class="letter">$\subseteqq$</li>
+                <li class="letter">$\varsubsetneq$</li>
+                <li class="letter">$\subsetneqq$</li>
+                <li class="letter">$\varsubsetneqq$</li>
+                <li class="letter">$\nsubseteqq$</li>
+                <li class="letter">$\subsetneq$</li>
+                <li class="letter">$\nsubseteq$</li>
+                <li class="letter">$\supseteq$</li>
+                <li class="letter">$\supseteqq$</li>
+                <li class="letter">$\supsetneq$</li>
+                <li class="letter">$\varsupsetneq$</li>
+                <li class="letter">$\nsupseteq$</li>
+                <li class="letter">$\supsetneqq$</li>
+                <li class="letter">$\varsupsetneqq$</li>
+                <li class="letter">$\nsupseteqq$</li>
+                <li class="letter">$\bigodot$</li>
+                <li class="letter">$\bigotimes$</li>
+                <li class="letter">$\bigoplus$</li>
+                <li class="letter">$\biguplus$</li>
+                </ul>
         </div>
         <div v-show="currentTab===8" class="tools__body">
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('\\sum ^{a}_{b}')" class="block block-big">
-                        <img src="@/assets/svg/8-1-1.svg" />
-                    </div>
-                    <div @click="addFormula('\\sum\\nolimits ^{a}_{b}')" class="block block-big">
-                        <img src="@/assets/svg/8-1-2.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('\\sum _{\a}')" class="block block-big">
-                        <img src="@/assets/svg/8-1-3.svg" />
-                    </div>
-                    <div @click="addFormula('\\sum\\nolimits _{a}')" class="block block-big">
-                        <img src="@/assets/svg/8-1-4.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('\\frac{2}{4}')" class="block block-big">
-                        <img src="@/assets/svg/8-2-1.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt{2}')" class="block block-big">
-                        <img src="@/assets/svg/8-2-2.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('/')" class="block block-big">
-                        <img src="@/assets/svg/8-2-3.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt[2]{4}')" class="block block-big">
-                        <img src="@/assets/svg/8-2-4.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('\\frac{2}{4}')" class="block block-big">
-                        <img src="@/assets/svg/6-1-1.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt{2}')" class="block block-big">
-                        <img src="@/assets/svg/6-1-2.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('/')" class="block block-big">
-                        <img src="@/assets/svg/6-1-3.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt[2]{4}')" class="block block-big">
-                        <img src="@/assets/svg/6-1-4.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('\\frac{2}{4}')" class="block block-big">
-                        <img src="@/assets/svg/8-4-1.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('/')" class="block block-big">
-                        <img src="@/assets/svg/8-4-2.svg" />
-                    </div>
-                </div>
-            </div>
+            <ul class="keyboard">
+                <li class="letter small">$\sin$</li>
+                <li class="letter small">$\cos$</li>
+                <li class="letter small">$\tan$</li>
+                <li class="letter small">$\csc$</li>
+                <li class="letter small">$\sec$</li>
+                <li class="letter small">$\cot$</li>
+                <li class="letter small">$\sinh$</li>
+                <li class="letter small">$\cosh$</li>
+                <li class="letter small">$\tanh$</li>
+                <li class="letter small">$\coth$</li>
+                <li class="letter small">$\hom$</li>
+                <li class="letter small">$\arcsin$</li>
+                <li class="letter small">$\arccos$</li>
+                <li class="letter small">$\det$</li>
+                <li class="letter small">$\arctan$</li>
+                <li class="letter small">$\textrm{arccsc}$</li>
+                <li class="letter small">$\textrm{arcsec}$</li>
+                <li class="letter small">$\textrm{arccot}$</li>
+                <li class="letter small">$\sin^{-1}$</li>
+                <li class="letter small">$\cos^{-1}$</li>
+                <li class="letter small">$\tan^{-1}$</li>
+                <li class="letter small">$\sinh^{-1}$</li>
+                <li class="letter small">$\cosh^{-1}$</li>
+                <li class="letter small">$\tanh^{-1}$</li>
+                <li class="letter small">$\exp$</li>
+                <li class="letter small">$\lg$</li>
+                <li class="letter small">$\ln$</li>
+                <li class="letter small">$\log$</li>
+                <li class="letter small">$\log_{e}$</li>
+                <li class="letter small">$\log_{10}$</li>
+                <li class="letter small">$\lim$</li>
+                <li class="letter small">$\liminf$</li>
+                <li class="letter small">$\limsup$</li>
+                <li class="letter small">$\max$</li>
+                <li class="letter small">$\min$</li>
+                <li class="letter small">$\infty$</li>
+                <li class="letter small">$\inf$</li>
+                <li class="letter small">$\arg$</li>
+                <li class="letter small">$\det$</li>
+                <li class="letter small">$\dim$</li>
+                <li class="letter small">$\gcd$</li>
+                <li class="letter small">$\hom$</li>
+                <li class="letter small">$\ker$</li>
+                <li class="letter small">$\Pr$</li>
+                <li class="letter small">$\sup$</li>
+                <li class="letter small">$\deg$</li>
+                <li class="letter small">$\injlim$</li>
+                <li class="letter small">$\varinjlim$</li>
+                <li class="letter small">$\varprojlim$</li>
+                <li class="letter small">$\varliminf$</li>
+                <li class="letter small">$\projlim$</li>
+                <li class="letter small">$\varlimsup$</li>
+                </ul>
         </div>
         <div v-show="currentTab===9" class="tools__body">
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('\\frac{2}{4}')" class="block block-big">
-                        <img src="@/assets/svg/9-1-1.svg" />
-                    </div>
-                    <div @click="addFormula('\\int_0^1 \\mathrm{e}^{-x}\\,\\mathrm{d}x')" class="block block-big">
-                        <img src="@/assets/svg/9-1-2.svg" width="48px" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('/')" class="block block-big">
-                        <img src="@/assets/svg/9-1-3.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt[2]{4}')" class="block block-big">
-                        <img src="@/assets/svg/9-1-4.svg" width="48px" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('\\frac{2}{4}')" class="block block-big">
-                        <img src="@/assets/svg/9-2-1.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt{2}')" class="block block-big">
-                        <img src="@/assets/svg/9-2-2.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('/')" class="block block-big">
-                        <img src="@/assets/svg/9-2-3.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt[2]{4}')" class="block block-big">
-                        <img src="@/assets/svg/9-2-4.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('\\frac{2}{4}')" class="block block-big">
-                        <img src="@/assets/svg/8-1-1.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('/')" class="block block-big">
-                        <img src="@/assets/svg/8-1-3.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('\\frac{2}{4}')" class="block block-big">
-                        <img src="@/assets/svg/8-1-1.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt{2}')" class="block block-big">
-                        <img src="@/assets/svg/8-1-2.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('/')" class="block block-big">
-                        <img src="@/assets/svg/8-1-3.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt[2]{4}')" class="block block-big">
-                        <img src="@/assets/svg/8-1-4.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
-            <div class="container-big">
-                <div class="container-big__line">
-                    <div @click="addFormula('\\frac{2}{4}')" class="block block-big">
-                        <img src="@/assets/svg/9-5-1.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt{2}')" class="block block-big">
-                        <img src="@/assets/svg/9-5-2.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div @click="addFormula('/')" class="block block-big">
-                        <img src="@/assets/svg/9-5-3.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt[2]{4}')" class="block block-big">
-                        <img src="@/assets/svg/9-5-4.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
-            <div class="container-small">
-                <div class="container-small__line">
-                    <div @click="addFormula('\\frac{2}{4}')" class="block block-small">
-                        <img src="@/assets/svg/9-6-1.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt{2}')" class="block block-small">
-                        <img src="@/assets/svg/9-6-2.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt{2}')" class="block block-small">
-                        <img src="@/assets/svg/9-6-3.svg" />
-                    </div>
-                </div>
-                <div class="container-small__line">
-                    <div @click="addFormula('/')" class="block block-small">
-                        <img src="@/assets/svg/9-6-4.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt[2]{4}')" class="block block-small">
-                        <img src="@/assets/svg/9-6-5.svg" />
-                    </div>
-                    <div @click="addFormula('\\sqrt{2}')" class="block block-small">
-                        <img src="@/assets/svg/9-6-6.svg" />
-                    </div>
-                </div>
-            </div>
+            <ul class="keyboard">
+                <li class="tab medium">$\tiny Tiny$</li>
+                <li class="tab medium">$\scriptsize Script$</li>
+                <li class="tab medium">$\small Small$</li>
+                <li class="tab medium">$\normalsize Normal$</li>
+                <li class="tab medium">$\large large$</li>
+                <li class="tab medium">$\Large Large$</li>
+                <li class="tab medium">$\LARGE LARGE$</li>
+                <li class="tab medium">$\huge huge$</li>
+                <li class="tab medium">$\Huge Huge$</li>
+                <li class="tab medium">$\mathbf{Bold}$</li>
+                <li class="tab medium">$\mathit{Italic}$</li>
+                <li class="tab medium">$\mathrm{Roman}$</li>
+                <li class="tab medium">$\mathcal{Mathcal}$</li>
+                <li class="tab medium">$\mathscr{Script}$</li>
+                <li class="tab medium">$\mathfrak{Fraktur}$</li>
+                <li class="tab medium">$\mathbb{Blackboard}$</li>
+                <li class="tab medium">$\mathsf{Sans Serif}$</li>
+                <li class="tab medium">$\mathtt{Typewriter}$</li>
+            </ul>
+        </div>
+        <div v-show="currentTab===10" class="tools__body">
+            <ul class="keyboard">
+                <li class="colorstrip">${\color[RGB]{0,255,255} Aqua}$</li>
+                <li class="colorstrip">${\color[RGB]{0,0,0} Black}$</li>
+                <li class="colorstrip">${\color[RGB]{0,0,255} Blue}$</li>
+                <li class="colorstrip">${\color[RGB]{255,0,0} Red}$</li>
+                <li class="colorstrip">${\color[RGB]{0,255,0} Lime}$</li>
+                <li class="colorstrip">${\color[RGB]{255,255,0} Yellow}$</li>
+                <li class="colorstrip">${\color[RGB]{255,0,255} Magenta}$</li>
+                <li class="colorstrip">${\color[RGB]{192,192,192} Silver}$</li>
+                <li class="colorstrip">${\color[RGB]{128,128,128} Gray}$</li>
+                <li class="colorstrip">${\color[RGB]{128,0,0} Maroon}$</li>
+                <li class="colorstrip">${\color[RGB]{128,128,0} Olive}$</li>
+                <li class="colorstrip">${\color[RGB]{0,128,0} Green}$</li>
+                <li class="colorstrip">${\color[RGB]{128,0,128} Purple}$</li>
+                <li class="colorstrip">${\color[RGB]{0,128,128} Teal}$</li>
+                <li class="colorstrip">${\color[RGB]{0,0,128} Navy}$</li>
+                <li class="colorstrip">${\color[RGB]{250,128,114} Salmon}$</li>
+                <li class="colorstrip">${\color[RGB]{255,127,80} Coral}$</li>
+                <li class="colorstrip">${\color[RGB]{255,69,0} Orange red}$</li>
+                <li class="colorstrip">${\color[RGB]{255,165,0} Orange}$</li>
+                <li class="colorstrip">${\color[RGB]{255,215,0} Gold}$</li>
+                <li class="colorstrip">${\color[RGB]{0,128,0} Green}$</li>
+                <li class="colorstrip">${\color[RGB]{100,149,237} Corn}$</li>
+                <li class="colorstrip">${\color[RGB]{75,0,130} Indigo}$</li>
+                <li class="colorstrip">${\color[RGB]{216,191,216} Thistle}$</li>
+                <li class="colorstrip">${\color[RGB]{160,82,45} Sienna}$</li>
+                <li class="colorstrip">${\color[RGB]{210,105,30} Chocolate}$</li>
+                <li class="colorstrip">${\color[RGB]{210,180,140} Tan}$</li>
+                <li class="colorstrip">${\color[RGB]{112,128,144} Slate Gray}$</li>
+                <li class="colorstrip">${\color[RGB]{105,105,105} Dim Gray}$</li>
+                <li class="colorstrip">${\color[RGB]{199,21,133} Violet}$</li>
+                <li class="colorstrip">${\color[RGB]{30,144,255} Dodg Blue}$</li>
+                <li class="colorstrip">${\color[RGB]{46,139,87} Sea Green}$</li>
+                <li class="colorstrip">${\color[RGB]{184,134,11} Dark Gold}$</li>
+                <li class="colorstrip">${\color[RGB]{165,42,42} Brown}$</li>
+            </ul>
         </div>
     </div>
 </div>
