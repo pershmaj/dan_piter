@@ -8,7 +8,7 @@ module.exports = {
     runtimeCompiler: true,
     devServer: {
         host: process.env.HOST !== undefined ? process.env.HOST : "localhost",
-        port: process.env.PORT !== undefined ? process.env.PORT : 8080
+        port: process.env.PORT !== undefined ? process.env.PORT : 8083
     },
     // css: {
     //   loaderOptions: {
