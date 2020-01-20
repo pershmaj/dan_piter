@@ -56,6 +56,7 @@ export default createComponent({
             addFormula(str: string) {
                 const position = ace.value.$ace.selection.getCursor();
                 ace.value.$ace.session.insert(position, str);
+                ace.value.$ace.focus();
             }
         };
 

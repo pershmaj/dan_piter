@@ -44,17 +44,18 @@ body {
             &-item {
                 width: 100%;
                 // background-color: #e4e4e4;
-                border: 1px solid #e4e4e4;
+                // border: 1px solid #e4e4e4 ;
                 color: $black;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 padding: 10px 5px;
-                // border-bottom: 1px solid #e4e4e4;
+                border-bottom: 1px solid #e4e4e4;
 
                 &_picked {
                     // border-bottom: 3px solid green;
-                    background: #f2f2f2;
+                    background: #E0E5FF;
+                    color: #304FFE;
                 }
                 &:focus {
                     outline: none;

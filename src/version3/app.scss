@@ -44,16 +44,18 @@ body {
             &-item {
                 width: 100%;
                 // background-color: #e4e4e4;
-                border: 1px solid #ffffff;
+                // border: 1px solid #e4e4e4 ;
                 color: $black;
                 display: flex;
                 justify-content: start;
                 align-items: center;
-                padding: 10px 5px;
+                padding: 10px 16px;
+                border-bottom: 1px solid #e4e4e4;
 
                 &_picked {
                     // border-bottom: 3px solid green;
-                    background: #f2f2f2;
+                    background: #EAEDFF;
+                    color: #304FFE;
                 }
                 &:focus {
                     outline: none;
@@ -88,7 +90,7 @@ body {
 
         .keyboard3 {
             li {
-                width: 160px !important;
+                width: 200px !important;
                 height: 60px !important;
             }
         }
