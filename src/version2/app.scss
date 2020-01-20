@@ -2,7 +2,7 @@ $black: #263238;
 
 #version2 {
     border: 1px solid black;
-    width: 900px;
+    width: 100%;
     height: 750px;
     border: 1px solid #e4e4e4;
     margin: auto;
@@ -32,11 +32,11 @@ $black: #263238;
             // box-shadow: 0px 4px 8px rgba(84, 110, 122, 0.24);
             display: flex;
 
-            &-item {
+            &-item {    
                 width: 100px;
                 background-color: #e4e4e4;
                 border: 1px solid #ffffff;
-                color: #fff;
+                color: #263238;
                 display: flex;
                 justify-content: center;
                 align-items: center;

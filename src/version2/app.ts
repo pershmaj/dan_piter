@@ -65,11 +65,23 @@ export default createComponent({
                 ace.value.$ace.session.insert(position, str);
             },
             paste(e: MouseEvent) {
-                console.log(e.target);
-                var formula: string = e.target!.getAttribute("data-formula");
-                console.log(formula);
-                formula = formula.split("$").join("");
-                f.addFormula(formula);
+                function getLi(el) {
+                    if (el.tagName == "LI") {
+                        console.log(el);
+                        return el;
+                    } else return getLi(el.parentNode);
+                }
+                if (e.target.tagName == "SPAN") {
+                    var li = getLi(e.target!);
+                    console.log(li);
+                    var formula = li.getAttribute("data-formula");
+                    formula = formula.split("$").join("");
+                    f.addFormula(formula);
+                } else {
+                    var formula: string = e.target!.getAttribute("data-formula");
+                    formula = formula.split("$").join("");
+                    f.addFormula(formula);
+                }
             }
         };
 

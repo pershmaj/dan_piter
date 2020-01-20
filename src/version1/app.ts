@@ -24,6 +24,10 @@ export default createComponent({
 
         const ace = ref(null);
 
+
+
+        
+
         var head = document.getElementsByTagName("head")[0],
             script;
         script = document.createElement("script");
