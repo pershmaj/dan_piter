@@ -1,15 +1,21 @@
 <div id="app">
     <div class="versions">
-        <div @click="version = 1" class="version1">Version 1</div>
+        <div @click="version = 1" class="version1">Prototype 1</div>
         <div class="separator"></div>
-        <div @click="version = 2" class="version2">Version 2</div>
+        <div @click="version = 2" class="version2">Prototype 2</div>
         <div class="separator"></div>
-        <div @click="version = 3" class="version2">Version 3</div>
+        <div @click="version = 3" class="version2">Prototype 3</div>
         <div class="separator"></div>
-        <div @click="version = 4" class="version2">Version 4</div>
+        <div @click="version = 4" class="version2">Prototype 4</div>
+        <div class="separator"></div>
+        <div @click="version = 5" class="version2">Prototype 5</div>
+        <div class="separator"></div>
+        <div @click="version = 6" class="version2">Prototype 6</div>
     </div>
     <div v-if="version == '1'"><version1 /></div>
     <div v-if="version == '2'"><version2 /></div>
     <div v-if="version == '3'"><version3 /></div>
     <div v-if="version == '4'"><version4 /></div>
+    <div v-if="version == '5'"><version5 /></div>
+    <div v-if="version == '6'"><version6 /></div>
 </div>

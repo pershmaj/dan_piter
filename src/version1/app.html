@@ -67,12 +67,12 @@
 
             <div class="container-big">
                 <div class="container-big__line">
-                    <div @click="addFormula('\a^2')" class="block block-big">
+                    <div @click="addFormula('\^2')" class="block block-big">
                         <img src="@/assets/svg/1-2-1.svg" />
                     </div>
                 </div>
                 <div class="container-big__line">
-                    <div @click="addFormula('\a_2')" class="block block-big">
+                    <div @click="addFormula('\_2')" class="block block-big">
                         <img src="@/assets/svg/1-2-2.svg" />
                     </div>
                 </div>
@@ -173,35 +173,6 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="vertical-line"></div>  -->
-
-            <!-- Copy Paste and Stuff
-                <div class="container-big">
-                <div class="container-big__line">
-                    <div class="block block-small">
-                        <img src="@/assets/svg/d1.svg" />
-                    </div>
-                    <div class="block block-small">
-                        <img src="@/assets/svg/d2.svg" />
-                    </div>
-                </div>
-                <div class="container-big__line">
-                    <div class="block block-small">
-                        <img src="@/assets/svg/d3.svg" />
-                    </div>
-                    <div class="block block-small">
-                        <img src="@/assets/svg/d4.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="container-big space">
-                <b-form-select class="select" v-model="fontFamilySelect">
-                    <option value="">Font</option>
-                </b-form-select>
-                <b-form-select class="select" v-model="fontSizeSelect">
-                    <option value="">Size</option>
-                </b-form-select>
-            </div> -->
         </div>
         <div v-show="currentTab===2" class="tools__body">
             <div class="container-big">
@@ -874,7 +845,7 @@
         <div v-show="currentTab===9" class="tools__body">
             <div class="container-big">
                 <div class="container-big__line">
-                    <div @click="addFormula('\\frac{2}{4}')" class="block block-big">
+                    <div @click="addFormula('\\int_0^1')" class="block block-big">
                         <img src="@/assets/svg/9-1-1.svg" />
                     </div>
                     <div @click="addFormula('\\int_0^1 \\mathrm{e}^{-x}\\,\\mathrm{d}x')" class="block block-big">
@@ -893,7 +864,7 @@
             <div class="vertical-line"></div>
             <div class="container-big">
                 <div class="container-big__line">
-                    <div @click="addFormula('\\frac{2}{4}')" class="block block-big">
+                    <div @click="addFormula('\\mathrm{d}')" class="block block-big">
                         <img src="@/assets/svg/9-2-1.svg" />
                     </div>
                     <div @click="addFormula('\\sqrt{2}')" class="block block-big">
@@ -944,7 +915,7 @@
             <div class="vertical-line"></div>
             <div class="container-big">
                 <div class="container-big__line">
-                    <div @click="addFormula('\\frac{2}{4}')" class="block block-big">
+                    <div @click="addFormula('\\int')" class="block block-big">
                         <img src="@/assets/svg/9-5-1.svg" />
                     </div>
                     <div @click="addFormula('\\sqrt{2}')" class="block block-big">

@@ -3,7 +3,7 @@ body {
     scroll-behavior: smooth;
 }
 
-#version4 {
+#version6 {
     border: 1px solid black;
     width: 100%;
     height: 750px;
@@ -33,7 +33,7 @@ body {
         height: 300px;
         &__tabs {
             height: 100%;
-            width: 10%;
+            width: 30%;
             background: #ffffff;
             // box-shadow: 0px 4px 8px rgba(84, 110, 122, 0.24);
             display: flex;
@@ -47,7 +47,7 @@ body {
                 border: 1px solid #e4e4e4;
                 color: $black;
                 display: flex;
-                justify-content: center;
+                justify-content: start;
                 align-items: center;
                 padding: 10px 5px;
                 // border-bottom: 1px solid #e4e4e4;
@@ -118,7 +118,7 @@ body {
             overflow-y: scroll;
             overflow-x: hidden;
             flex-direction: column;
-            width: 90%;
+            width: 70%;
             scroll-behavior: smooth;
         }
 
