@@ -8,7 +8,10 @@ import VueBootstrap from "bootstrap-vue";
 import "bootstrap/dist/css/bootstrap.css";
 const math = require("mathjax");
 import AceEditor from "vue-editor-ace";
-
+import Scrollactive from "vue-scrollactive";
+import Plugin from "vue-affix";
+Vue.use(Scrollactive);
+Vue.use(Plugin);
 Vue.use(AceEditor);
 Vue.use(VueBootstrap);
 Vue.use(CompositionApi);
