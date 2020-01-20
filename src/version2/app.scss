@@ -69,14 +69,36 @@ $black: #263238;
             li {
                 float: left;
                 margin: 0 5px 5px 0;
-                width: 35px;
-                height: 35px;
+                width: 40px;
+                height: 40px;
                 line-height: 35px;
                 text-align: center;
                 background: #eee;
                 border: 1px solid #f9f9f9;
                 -moz-border-radius: 5px;
                 -webkit-border-radius: 5px;
+            }
+        }
+
+        .keyboard2 {
+            li {
+                width: 80px !important;
+                height: 40px !important;
+            }
+        }
+
+        .keyboard3 {
+            li {
+                width: 220px !important;
+                height: 60px !important;
+            }
+        }
+
+
+        .keyboard4 {
+            li {
+                width: 160px !important;
+                height: 60px !important;
             }
         }
 

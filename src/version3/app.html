@@ -1,6 +1,6 @@
 <div id="version3">
     <div class="top">
-        <div class="top__name">Prorotype 3</div>
+        <div class="top__name">Prototype 3</div>
     </div>
     <div class="joined-editor">
         <div class="code">
@@ -15,23 +15,24 @@
     <div class="tools">
         
             <div class="tools__tabs">
-            <a href="#section-1" @click="getToolss" class="tools__tabs-item tools__tabs-item_picked">Section 1</a>
-            <a href="#section-2" class="tools__tabs-item">Section 2</a>
-            <a href="#section-3" class="tools__tabs-item">Section 3</a>
-            <a href="#section-4" class="tools__tabs-item">Section 4</a>
-            <a href="#section-5" class="tools__tabs-item">Section 5</a>
-            <a href="#section-6" class="tools__tabs-item">Section 6</a>
-            <a href="#section-7" class="tools__tabs-item">Section 7</a>
-            <a href="#section-8" class="tools__tabs-item">Section 8</a>
-            <a href="#section-9" class="tools__tabs-item">Section 9</a>
-            <a href="#section-10" class="tools__tabs-item">Section 10</a>
+            <a href="#section-1" @click="getToolss" class="tools__tabs-item tools__tabs-item_picked">Basic</a>
+            <a href="#section-2" class="tools__tabs-item">Maths</a>
+            <a href="#section-3" class="tools__tabs-item">Formula</a>
+            <a href="#section-4" class="tools__tabs-item">Arrows</a>
+            <a href="#section-5" class="tools__tabs-item">Alphabets</a>
+            <a href="#section-6" class="tools__tabs-item">Symbols</a>
+            <a href="#section-7" class="tools__tabs-item">Operators</a>
+            <a href="#section-8" class="tools__tabs-item">Functions</a>
+            <a href="#section-9" class="tools__tabs-item">Fonts</a>
+            <!-- <a href="#section-10" class="tools__tabs-item">Colors</a> -->
             </div>
         <section id="buttons" class="tools__body-container">
             <section id="section-1" class="tools__body">
+                Basic
                 <ul class="keyboard">
-                    <li class="letter" style="font-size:10px;">Space</li>
-                    <li class="letter" style="font-size:10px;">Quad</li>
-                    <li class="letter" style="font-size:10px;">Enter</li>
+                    <!-- <li class="letter" style="font-size:10px;">Space</li> -->
+                    <!-- <li class="letter" style="font-size:10px;">Quad</li> -->
+                    <!-- <li class="letter" style="font-size:10px;">Enter</li> -->
                     <li class="letter">$\cdot$</li>
                     <li class="letter">$.$</li>
                     <li class="letter">$*$</li>
@@ -92,7 +93,8 @@
                 </ul>
             </section>
             <section id="section-2" class="tools__body">
-                <ul class="keyboard">
+                Maths
+                <ul class="keyboard keyboard2">
                     <li class="tab">$\int$</li>
                     <li class="tab">$\int_{a}^{b}$</li>
                     <li class="tab">$\oint$</li>
@@ -135,7 +137,8 @@
                 </ul>
             </section>
             <section id="section-3" class="tools__body">
-                <ul class="keyboard">
+                Formula
+                <ul class="keyboard keyboard3">
                     <li class="bigtab">$\displaystyle\sum\limits_{i=0}^n i^3$</li>
                     <li class="bigtab">$\left(\begin{array}{c}a\\ b\end{array}\right)$</li>
                     <li class="bigtab">$\left(\frac{a^2}{b^3}\right)$</li>
@@ -165,6 +168,7 @@
                 </ul>
             </section>
             <section id="section-4" class="tools__body">
+                Arrows
                 <ul class="keyboard">
                     <li class="letter">$\uparrow$</li>
                     <li class="letter">$\downarrow$</li>
@@ -234,6 +238,7 @@
                 </ul>
             </section>
             <section id="section-5" class="tools__body">
+                Alphabets
                 <ul class="keyboard">
                     <li class="letter">$\aleph$</li>
                     <li class="letter">$\Gamma$</li>
@@ -298,6 +303,7 @@
                 </ul>
             </section>
             <section id="section-6" class="tools__body">
+                Symbols
                 <ul class="keyboard">
                     <li class="letter">$\#$</li>
                     <li class="letter">$\clubsuit$</li>
@@ -338,6 +344,7 @@
                 </ul>
             </section>
             <section id="section-7" class="tools__body">
+                Operators
                 <ul class="keyboard">
                     <li class="letter">$\mp$</li>
                     <li class="letter">$\doteqdot$</li>
@@ -566,7 +573,8 @@
                 </ul>
             </section>
             <section id="section-8" class="tools__body">
-                <ul class="keyboard">
+                Functions
+                <ul class="keyboard keyboard2">
                     <li class="letter small">$\sin$</li>
                     <li class="letter small">$\cos$</li>
                     <li class="letter small">$\tan$</li>
@@ -622,7 +630,8 @@
                 </ul>
             </section>
             <section id="section-9" class="tools__body">
-                <ul class="keyboard">
+                Fonts
+                <ul class="keyboard keyboard4">
                     <li class="tab medium">$\tiny Tiny$</li>
                     <li class="tab medium">$\scriptsize Script$</li>
                     <li class="tab medium">$\small Small$</li>
@@ -643,8 +652,9 @@
                     <li class="tab medium">$\mathtt{Typewriter}$</li>
                 </ul>
             </section>
-            <section id="section-10" class="tools__body">
-                <ul class="keyboard">
+            <!-- <section id="section-10" class="tools__body">
+                Colors
+                <ul class="keyboard keyboard4">
                     <li class="colorstrip">${\color[RGB]{0,255,255} Aqua}$</li>
                     <li class="colorstrip">${\color[RGB]{0,0,0} Black}$</li>
                     <li class="colorstrip">${\color[RGB]{0,0,255} Blue}$</li>
@@ -680,7 +690,7 @@
                     <li class="colorstrip">${\color[RGB]{184,134,11} Dark Gold}$</li>
                     <li class="colorstrip">${\color[RGB]{165,42,42} Brown}$</li>
                 </ul>
-            </section>
+            </section> -->
         </section>
     </div class="tools__tabs">
     </div>

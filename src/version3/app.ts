@@ -74,7 +74,6 @@ export default createComponent({
                     let observer = new IntersectionObserver(
                         _.debounce(function(entries) {
                             if (entries[0].isIntersecting === true) {
-                                console.log(el.id);
                                 $(`a[href="#${el.id}"]`).focus();
                                 document.querySelector(".tools__tabs-item_picked")!.classList.remove("tools__tabs-item_picked");
                                 document.querySelector(`a[href="#${el.id}"]`)!.classList.add("tools__tabs-item_picked");

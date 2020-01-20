@@ -63,17 +63,17 @@
                 <!-- <img src="@/assets/svg/tab9.svg" width="44px" class="tools__tabs-item-icon" /> -->
                 Fonts
             </div>
-            <div @click="changeTab(10)" :class="currentTab === 10? 'tools__tabs-item_picked': ''" class="tools__tabs-item">
-                <!-- <img src="@/assets/svg/tab9.svg" width="44px" class="tools__tabs-item-icon" /> -->
+            <!-- <div @click="changeTab(10)" :class="currentTab === 10? 'tools__tabs-item_picked': ''" class="tools__tabs-item">
+                <img src="@/assets/svg/tab9.svg" width="44px" class="tools__tabs-item-icon" />
                 Colors
-            </div>
+            </div> -->
         </div>
 
         <div v-show="currentTab===1" class="tools__body">
             <ul class="keyboard">
-                <li class="letter" style="font-size:10px;">Space</li>
+                <!-- <li class="letter" style="font-size:10px;">Space</li>
                 <li class="letter" style="font-size:10px;">Quad</li>
-                <li class="letter" style="font-size:10px;">Enter</li>
+                <li class="letter" style="font-size:10px;">Enter</li> -->
                 <li class="letter">$\cdot$</li>
                 <li class="letter">$.$</li>
                 <li class="letter">$*$</li>
@@ -134,7 +134,7 @@
             </ul>
         </div>
         <div v-show="currentTab===2" class="tools__body">
-            <ul class="keyboard">
+            <ul class="keyboard keyboard2">
                 <li class="tab">$\int$</li>
                 <li class="tab">$\int_{a}^{b}$</li>
                 <li class="tab">$\oint$</li>
@@ -177,7 +177,7 @@
                 </ul>
         </div>
         <div v-show="currentTab===3" class="tools__body">
-            <ul class="keyboard">
+            <ul class="keyboard keyboard3">
                 <li class="bigtab">$\displaystyle\sum\limits_{i=0}^n i^3$</li>
                 <li class="bigtab">$\left(\begin{array}{c}a\\ b\end{array}\right)$</li>
                 <li class="bigtab">$\left(\frac{a^2}{b^3}\right)$</li>
@@ -611,7 +611,7 @@
                 </ul>
         </div>
         <div v-show="currentTab===8" class="tools__body">
-            <ul class="keyboard">
+            <ul class="keyboard keyboard2">
                 <li class="letter small">$\sin$</li>
                 <li class="letter small">$\cos$</li>
                 <li class="letter small">$\tan$</li>
@@ -667,7 +667,7 @@
                 </ul>
         </div>
         <div v-show="currentTab===9" class="tools__body">
-            <ul class="keyboard">
+            <ul class="keyboard keyboard4">
                 <li class="tab medium">$\tiny Tiny$</li>
                 <li class="tab medium">$\scriptsize Script$</li>
                 <li class="tab medium">$\small Small$</li>
@@ -688,7 +688,7 @@
                 <li class="tab medium">$\mathtt{Typewriter}$</li>
             </ul>
         </div>
-        <div v-show="currentTab===10" class="tools__body">
+        <!-- <div v-show="currentTab===10" class="tools__body">
             <ul class="keyboard">
                 <li class="colorstrip">${\color[RGB]{0,255,255} Aqua}$</li>
                 <li class="colorstrip">${\color[RGB]{0,0,0} Black}$</li>
@@ -725,6 +725,6 @@
                 <li class="colorstrip">${\color[RGB]{184,134,11} Dark Gold}$</li>
                 <li class="colorstrip">${\color[RGB]{165,42,42} Brown}$</li>
             </ul>
-        </div>
+        </div> -->
     </div>
 </div>
