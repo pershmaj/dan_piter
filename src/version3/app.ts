@@ -1,8 +1,13 @@
 import { createComponent, reactive, toRefs, onMounted, ref, watch } from "@vue/composition-api";
 const math = require("mathjax");
 import _ from "lodash";
+// import { Affix } from "vue-affix";
+import $ from "jquery";
 
 export default createComponent({
+    // components: {
+    //     Affix
+    // },
     setup(props, ctx) {
         const s = reactive({
             fontFamilySelect: "",
@@ -48,14 +53,7 @@ export default createComponent({
             script.src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML";
             head.appendChild(script);
 
-            // els.forEach(he => {
-            //     // var old_element = document.getElementById("btn")!;
-            //     let el = he.children[1];
-            //     console.log(el);
-            //     bla(el);
-            //     // var new_element = el.cloneNode(true);
-            //     // el!.parentNode!.replaceChild(new_element, el);
-            // });
+            f.checkElements();
         });
 
         const f = {
@@ -70,6 +68,24 @@ export default createComponent({
             },
             changeTab(n: number) {
                 s.currentTab = n;
+            },
+            checkElements() {
+                $(".tools__body").each((i, el) => {
+                    let observer = new IntersectionObserver(
+                        _.debounce(function(entries) {
+                            if (entries[0].isIntersecting === true) {
+                                console.log(el.id);
+                                $(`a[href="#${el.id}"]`).focus();
+                                document.querySelector(".tools__tabs-item_picked")!.classList.remove("tools__tabs-item_picked");
+                                document.querySelector(`a[href="#${el.id}"]`)!.classList.add("tools__tabs-item_picked");
+                            }
+                        }, 500),
+
+                        { threshold: [0] }
+                    );
+
+                    observer.observe(el);
+                });
             },
             addFormula(str: string) {
                 const position = ace.value.$ace.selection.getCursor();
@@ -93,6 +109,14 @@ export default createComponent({
                     formula = formula.split("$").join("");
                     f.addFormula(formula);
                 }
+            },
+            getTools(e: MouseEvent) {
+                // e.preventDefault();
+                console.log(e);
+                const el: HTMLLinkElement = e.srcElement!;
+                $($(el).attr("href")).scrollTop();
+                console.log($());
+                document.querySelector($(el).attr("href"))!.focus();
             }
         };
 

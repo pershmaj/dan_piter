@@ -3,7 +3,10 @@
         <div @click="version = 1" class="version1">Version 1</div>
         <div class="separator"></div>
         <div @click="version = 2" class="version2">Version 2</div>
+        <div class="separator"></div>
+        <div @click="version = 3" class="version2">Version 3</div>
     </div>
     <div v-if="version == '1'"><version1 /></div>
     <div v-if="version == '2'"><version2 /></div>
+    <div v-if="version == '3'"><version3 /></div>
 </div>
