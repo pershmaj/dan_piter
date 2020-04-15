@@ -1,8 +1,30 @@
 <div class="container h-100">
-    <div v-if="version == '1'"><version1 /></div>
-    <div v-if="version == '2'"><version2 /></div>
-    <div v-if="version == '3'"><version3 /></div>
-    <div v-if="version == '4'"><version4 /></div>
-    <div v-if="version == '5'"><version5 /></div>
-    <div v-if="version == '6'"><version6 /></div>
+    <div class="row">
+        <div class="col-4">
+            <div class="d-flex justify-content-end align-items-center h-100 font-weight-bold">
+                <span>Введите выражение:</span>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="d-flex justify-content-center align-items-center mb-2">
+                <img src="@/assets/svg/math-20200124.svg" alt="">
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="d-flex justify-content-start align-items-center h-100">
+                <div class="font-weight-bold">
+                    <p class="m-0">00:03:23</p>
+                    <p class="m-0">Тест 1/2</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="latex-box">
+        <div v-if="version == '1'"><version1 /></div>
+        <div v-if="version == '2'"><version2 /></div>
+        <div v-if="version == '3'"><version3 /></div>
+        <div v-if="version == '4'"><version4 /></div>
+        <div v-if="version == '5'"><version5 /></div>
+        <div v-if="version == '6'"><version6 /></div>
+    </div>
 </div>
