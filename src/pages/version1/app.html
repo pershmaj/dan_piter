@@ -845,6 +845,26 @@
         <div v-show="currentTab===9" class="tools__body">
             <div class="container-big">
                 <div class="container-big__line">
+                    <div @click="addFormula('\\int_0^1x')" class="block block-big">
+                        <img src="@/assets/svg/9-0-1.svg" width="38px"/>
+                    </div>
+                    
+                    <div @click="addFormula(' \\,\\mathrm{d}x')" class="block block-big">
+                        <img src="@/assets/svg/9-0-3.svg" />
+                    </div>
+                   
+                </div>
+                <div class="container-big__line">
+                    <div @click="addFormula('\\int\\limits^0_1')" class="block block-big">
+                        <img src="@/assets/svg/9-0-2.svg" width="31px" />
+                    </div>
+                    <div @click="addFormula('\\partial x')" class="block block-big">
+                        <img src="@/assets/svg/9-0-4.svg" />
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="container-big">
+                <div class="container-big__line">
                     <div @click="addFormula('\\int_0^1')" class="block block-big">
                         <img src="@/assets/svg/9-1-1.svg" />
                     </div>
@@ -879,7 +899,7 @@
                         <img src="@/assets/svg/9-2-4.svg" />
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- <div class="vertical-line"></div>
             <div class="container-big">
                 <div class="container-big__line">
