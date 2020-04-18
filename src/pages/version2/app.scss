@@ -1,0 +1,263 @@
+$black: #263238;
+
+#version2 {
+    border: 1px solid black;
+    width: 100%;
+    height: 750px;
+    border: 1px solid #e4e4e4;
+    margin: auto;
+    color: $black;
+
+    .top {
+        height: 56px;
+        padding: 16px 0;
+        background: $black;
+
+        &__name {
+            font-family: Raleway;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 28px;
+            text-align: center;
+            letter-spacing: 0.5px;
+            color: #fff;
+        }
+    }
+
+    .tools {
+        &__tabs {
+            height: 40px;
+            background: #ffffff;
+            // box-shadow: 0px 4px 8px rgba(84, 110, 122, 0.24);
+            display: flex;
+
+            &-item {    
+                width: 100px;
+                background-color: #e4e4e4;
+                border: 1px solid #ffffff;
+                color: #263238;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    path {
+                        fill: #ffffff;
+                    }
+                }
+
+                &_picked {
+                    width: 101px;
+                    background-color: #ffffff;
+                    color: $black;
+                    display: flex;
+
+                    img {
+                        path {
+                            fill: #000000;
+                        }
+                    }
+                }
+            }
+        }
+
+        .keyboard {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                float: left;
+                margin: 0 5px 5px 0;
+                width: 40px;
+                height: 40px;
+                line-height: 35px;
+                text-align: center;
+                background: #eee;
+                border: 1px solid #f9f9f9;
+                -moz-border-radius: 5px;
+                -webkit-border-radius: 5px;
+            }
+        }
+
+        .keyboard2 {
+            li {
+                width: 80px !important;
+                height: 40px !important;
+            }
+        }
+
+        .keyboard3 {
+            li {
+                width: 220px !important;
+                height: 60px !important;
+            }
+        }
+
+
+        .keyboard4 {
+            li {
+                width: 160px !important;
+                height: 60px !important;
+            }
+        }
+
+        &__body {
+            height: 168px;
+            padding: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #d4d6d7;
+
+            .vertical-line {
+                width: 1px;
+                height: 136px;
+                background: #d4d6d7;
+                margin: 0px 8px;
+            }
+
+            .block {
+                background-color: #f8f8f8;
+                border-radius: 3px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 8px;
+
+                &:hover {
+                    background-color: #e8e8e8;
+                }
+
+                &:active {
+                    background-color: #d8d8d8;
+                }
+
+                &:last-child {
+                    margin-right: 0px;
+                }
+
+                &-small {
+                    width: 40px;
+                    height: 40px;
+                    // background-color: #f8f8f8;
+                    // border-radius: 3px;
+                }
+
+                &-wide {
+                    width: 64px;
+                    height: 40px;
+                }
+
+                &-big {
+                    width: 64px;
+                    height: 64px;
+                }
+            }
+
+            .container {
+                &-small {
+                    padding: 16px 0px;
+                    &__line {
+                        display: flex;
+                        margin-bottom: 24px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                &-big {
+                    &.space {
+                        margin-left: 16px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    &__line {
+                        display: flex;
+                        margin-bottom: 8px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            .select {
+                height: 40px;
+                width: 172px;
+                margin-bottom: 8px;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.44px;
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .joined-editor {
+        display: flex;
+        .editor {
+            width: 50%;
+            &-header {
+                margin: 8px 0 24px 16px;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                font-family: Raleway;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 28px;
+                letter-spacing: 0.5px;
+                color: #979797;
+            }
+
+            &-body {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 60px;
+                min-height: 100px;
+            }
+        }
+
+        .code {
+            width: 50%;
+            background: #f4f4f4;
+            padding: 8px 16px 32px 16px;
+            height: 264px;
+            .header {
+                margin-bottom: 24px;
+
+                font-family: Raleway;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 28px;
+                /* identical to box height, or 140% */
+
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.5px;
+
+                /* Icons Color */
+
+                color: #979797;
+            }
+
+            .ace_editor {
+                height: 200px;
+            }
+        }
+    }
+}

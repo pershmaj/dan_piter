@@ -1,0 +1,32 @@
+html, body {
+  height: 100%;
+}
+
+.page {
+  &-left-corner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  &-right-corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &-button {
+    width: 240px;
+    height: 64px;
+    line-height: 66px;
+    color: white;
+    background: #304FFE;
+    box-shadow: 0px 4px 8px rgba(2, 119, 189, 0.24);
+    display: block;
+    text-decoration: none !important;
+    transition: 0.2s;
+    text-align: center;
+    &:hover{
+      color: white;
+      background: #1437ff;
+    }
+  }
+}
